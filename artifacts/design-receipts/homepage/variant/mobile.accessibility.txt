@@ -1,0 +1,182 @@
+- link "Skip to the work" [ref=e1]
+- banner
+  - link "Marc LaVallee, back to top" [ref=e2]
+  - navigation "Primary navigation" [ref=e3]
+    - link "Public work" [ref=e15]
+    - link "Open source" [ref=e16]
+    - link "GitHub " [ref=e17]
+- main
+  - region "Beyond the prompt is where the real work starts." [ref=e4]
+    - paragraph
+      - StaticText "OPEN SOURCE · PUBLIC INTEREST · AGENTIC SYSTEMS"
+    - heading "Beyond the prompt is where the real work starts." [level=1, ref=e18]
+      - StaticText "Beyond the prompt is where the "
+      - emphasis
+        - StaticText "real work"
+      - StaticText " starts."
+    - paragraph
+      - StaticText "I’m Marc LaVallee. I’m building a connected software factory for research, decisions, and publishing—with public sites that test the ideas against real communities and real work."
+    - link "Explore the open-source stack" [ref=e19]
+    - link "Visit the public experiments " [ref=e20]
+    - paragraph
+      - strong
+        - StaticText "The premise:"
+      - StaticText " AI can produce plenty. The harder question is whether the work remains observable, grounded, reusable, and answerable to people."
+    - generic "A media software factory"
+      - generic
+        - StaticText "ONE CONNECTED LOOP"
+        - StaticText "BUILT IN THE OPEN"
+      - heading "A media software factory" [level=2, ref=e32]
+      - list
+        - listitem [level=1]
+        - listitem [level=1]
+        - listitem [level=1]
+        - listitem [level=1]
+      - image "The learning loop returns to observation A curved arrow connects publishing back to observation."
+      - StaticText "USE IT → LEARN → FEED IT BACK"
+  - region "The work begins at the friction." [ref=e5]
+    - StaticText "01"
+    - StaticText "WHY BUILD"
+    - heading "The work begins at the friction." [level=2, ref=e21]
+    - paragraph
+      - StaticText "A problem in reporting, research, or civic life becomes a small tool. The tool gets used hard. If the useful part generalizes, it becomes infrastructure other people can inspect, adapt, and improve."
+    - paragraph
+      - StaticText "That path—from personal need to public component—is more interesting to me than building software from a market category backward. It keeps the abstractions honest and the feedback close to the work."
+    - paragraph
+      - StaticText "The projects here are separate on purpose. A reporter’s notebook should not become a model router; a public school site should not become an agent console. They share contracts and lessons without collapsing into one giant platform."
+    - generic "The working method"
+      - StaticText "1"
+      - StaticText "Start specific"
+      - StaticText "2"
+      - StaticText "Use it for real"
+      - StaticText "3"
+      - StaticText "Preserve the evidence"
+      - StaticText "4"
+      - StaticText "Share what travels"
+  - region "Not demo reels. Places where the ideas meet people." [ref=e6]
+    - StaticText "02"
+    - StaticText "PUBLIC PROVING GROUNDS"
+    - heading "Not demo reels. Places where the ideas meet people." [level=2, ref=e22]
+    - paragraph
+      - StaticText "Each public site asks a different question and puts a different part of the stack under pressure."
+    - article
+      - StaticText "01"
+      - paragraph
+        - StaticText "DATA & CIVIC LIFE"
+      - heading "NJ School Data" [level=3, ref=e33]
+      - paragraph
+        - StaticText "Can public school data be genuinely useful without sanding away its complexity?"
+      - paragraph
+        - StaticText "A growing collection of data and visualizations for parents and other stakeholders navigating New Jersey schools. Agent-assisted and maintained with human editorial oversight."
+      - link "Visit njschooldata.fyi " [ref=e34]
+    - article
+      - StaticText "02"
+      - paragraph
+        - StaticText "JOURNALISM & AGENTS"
+      - heading "Backfield" [level=3, ref=e35]
+      - paragraph
+        - StaticText "What does a newsroom look like when agents are first-class participants?"
+      - paragraph
+        - StaticText "An agentic news organization covering AI and media. Agent reporters maintain beats, publish short posts, collaborate on durable artifacts, and pursue enterprise work under named human accountability."
+      - link "Visit backfield.net " [ref=e36]
+    - article
+      - StaticText "03"
+      - paragraph
+        - StaticText "GAMES & CREATIVE SYSTEMS"
+      - heading "Caz Games" [level=3, ref=e37]
+      - paragraph
+        - StaticText "Can an agentic studio learn taste—not just produce volume?"
+      - paragraph
+        - StaticText "An agentic game studio learning in public how to make games that don’t suck: small releases, visible iteration, and a practical test of where human direction matters most."
+      - link "Visit Caz Games " [ref=e38]
+  - region "Small tools, connected by the work." [ref=e7]
+    - StaticText "03"
+    - StaticText "OPEN-SOURCE STACK"
+    - heading "Small tools, connected by the work." [level=2, ref=e23]
+    - paragraph
+      - StaticText "These projects are designed to stand alone. Together, they form a loop for seeing what agents did, giving them better context, preserving evidence, and turning the result into something people can use."
+    - region "Know what happened" [ref=e24]
+      - paragraph
+        - StaticText "I"
+      - heading "Know what happened" [level=3, ref=e39]
+      - paragraph
+        - StaticText "Observe model calls and agent work closely enough to improve the system instead of guessing."
+      - article
+        - heading "somm" [level=4, ref=e48]
+        - paragraph
+        - link "Docs" [ref=e49]
+        - link "Code" [ref=e50]
+      - article
+        - heading "milton" [level=4, ref=e51]
+        - paragraph
+        - link "Code" [ref=e52]
+    - region "Shape how agents work" [ref=e25]
+      - paragraph
+        - StaticText "II"
+      - heading "Shape how agents work" [level=3, ref=e40]
+      - paragraph
+        - StaticText "Make operational knowledge portable, composable, and explicit about its boundaries."
+      - article
+        - heading "chip" [level=4, ref=e53]
+        - paragraph
+        - link "Code" [ref=e54]
+      - article
+        - heading "spindle" [level=4, ref=e55]
+        - paragraph
+        - link "Docs" [ref=e56]
+        - link "Code" [ref=e57]
+    - region "Keep the work grounded" [ref=e26]
+      - paragraph
+        - StaticText "III"
+      - heading "Keep the work grounded" [level=3, ref=e41]
+      - paragraph
+        - StaticText "Give humans and agents durable memory without confusing a fluent answer for evidence."
+      - article
+        - heading "flip" [level=4, ref=e58]
+        - paragraph
+        - link "Code" [ref=e59]
+      - article
+        - heading "eno" [level=4, ref=e60]
+        - paragraph
+        - link "Docs" [ref=e61]
+        - link "Code" [ref=e62]
+      - article
+        - heading "ergo" [level=4, ref=e63]
+        - paragraph
+          - StaticText "Dataset documentation built around the caveats that determine justified use: stable issue IDs, machine-readable scope, and links to the code that compensates."
+        - link "Code" [ref=e64]
+    - region "Make the result legible" [ref=e27]
+      - paragraph
+      - heading "Make the result legible" [level=3, ref=e42]
+      - paragraph
+      - article
+        - link "Docs" [ref=e66]
+        - link "Code" [ref=e67]
+      - article
+        - link "Code" [ref=e69]
+      - article
+        - link "Docs" [ref=e71]
+        - link "Code" [ref=e72]
+      - article
+        - link "Docs" [ref=e74]
+        - link "Code" [ref=e75]
+    - region "Let agents participate" [ref=e28]
+      - paragraph
+      - heading "Let agents participate" [level=3, ref=e43]
+      - paragraph
+      - article
+        - link "Code" [ref=e77]
+  - region "Fast output makes judgment more important, not less." [ref=e8]
+    - StaticText "04"
+    - StaticText "BUILDING PRINCIPLES"
+    - heading "Fast output makes judgment more important, not less." [level=2, ref=e29]
+    - paragraph
+      - StaticText "Most of the code in these repositories is generated with AI. Much of it is alpha. Publishing the work is part of the discipline: contracts, tests, provenance, limitations, and failure modes become inspectable."
+  - region "Use a tool. Fork an idea. Tell me where the abstraction breaks." [ref=e9]
+    - link "Explore all projects on GitHub" [ref=e31]
+- contentinfo
+  - link "Marc LaVallee, back to top" [ref=e10]
+  - link "GitHub" [ref=e11]
+  - link "NJ School Data" [ref=e12]
+  - link "Backfield" [ref=e13]
+  - link "Caz Games" [ref=e14]

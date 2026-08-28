@@ -1,1 +1,6 @@
-theme: jekyll-theme-tactile
+title: Marc LaVallee
+description: Open-source systems and public experiments for research, decisions, journalism, and creative work with AI.
+url: https://lavallee.github.io
+exclude:
+  - docs/
+  - artifacts/

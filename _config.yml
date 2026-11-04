@@ -4,3 +4,6 @@ url: https://lavallee.github.io
 exclude:
   - docs/
   - artifacts/
+  - scripts/
+  - public-site/
+  - artifact.toml

@@ -1,17 +1,66 @@
 ---
-kicker: Open source, built in public
-description: A running log of releases from my open-source projects — what shipped, what grew, what got fixed, with links to the code, the release, and the docs.
+description: A running log of open-source releases, newest first.
 ---
 
-# Marc Lavallee — open-source release log
+# Marc Lavallee
+
+::: html #site-style
+<style>
+  /* The release-log look, over the kit's article layout. Page chrome the old
+     design did not have: masthead, kicker, byline, contents, colophon. */
+  .article-masthead, .article-kicker, .article-byline, .toc, .article-colophon { display: none; }
+
+  /* The old palette: paper, ink, and the teal accent. */
+  :root { --accent: #0f6b5c; --accent-strong: #0b4f43; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16191e; --surface: #1c2027; --text: #d9dee5; --text-2: #c4cbd6;
+            --muted: #97a1af; --border: #2b303a; --border-strong: #3a4150;
+            --code-bg: #1e222a; --accent: #57c3ab; --accent-strong: #7fd4c0; }
+  }
+
+  /* One centered column, the old .wrap. */
+  main.article { display: block; max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 3rem;
+                 font: 400 1rem/1.65 var(--font-ui); color: var(--text);
+                 background: var(--bg); }
+
+  /* Header: the old site-header — name, tagline, intro. */
+  .article-header { text-align: left; padding: 3.5rem 0 2rem; margin: 0 0 2rem;
+                    border-bottom: 1px solid var(--border); }
+  .article-title { font: 700 1.75rem/1.2 var(--font-ui); letter-spacing: -0.01em;
+                   color: var(--text); margin: 0 0 0.5rem; }
+  .article-dek { font: 400 1.05rem/1.5 var(--font-ui); color: var(--muted); margin: 0; }
+
+  /* Section labels: the old month and group headers. */
+  main.article h2 { font: 500 0.85rem/1 var(--font-numeric); letter-spacing: 0.08em;
+                   text-transform: uppercase; color: var(--muted); margin: 2.25rem 0 0.75rem; }
+  main.article h2:first-of-type { margin-top: 0.75rem; }
+
+  /* Project rows. */
+  main.article ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+  main.article li { padding: 0.3rem 0; font-size: 0.925rem; }
+  main.article li a { color: var(--accent); }
+  main.article li a:hover { color: var(--accent-strong); }
+
+  /* Log entries: bordered rows with a mono lead line. */
+  main.article p:has(> strong:first-child) {
+    border-top: 1px solid var(--border); padding: 1rem 0 1.25rem; margin: 0 0 0.25rem;
+  }
+  main.article p:has(> strong:first-child) > strong:first-child {
+    display: block; font: 500 0.875rem/1.4 var(--font-numeric); margin-bottom: 0.35rem;
+  }
+  main.article p { margin: 0 0 1rem; }
+  main.article a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  main.article a:hover { color: var(--accent-strong); }
+  main.article code { font: 0.875em var(--font-numeric); background: var(--code-bg);
+                       border-radius: 4px; padding: 0.15em 0.35em; }
+</style>
+:::
 
 I build small open-source tools for research, decision-making, journalism, and creative work with AI. This page records what ships from those projects: what grew, what changed, what got fixed. Each entry links to the code, the release, and the docs where they exist.
 
 Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), and [LinkedIn](https://www.linkedin.com/in/marclavallee). The current homes of the work are [Lyra Forge](https://www.lyra-forge.com) and [Lyra-TK](https://www.lyra-tk.com).
 
-## The projects
-
-### Research & evidence
+## Research & evidence
 
 - [flip](https://github.com/lavallee/flip) ([docs](https://lavallee.github.io/flip/)) — Format and tooling for agent-driven research notebooks.
 - [flip-documents](https://github.com/lavallee/flip-documents) — Original document capture and conversion for Flip notebooks.
@@ -24,12 +73,12 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 - [ergo](https://github.com/lavallee/ergo) — Dataset documentation with structured, code-linked known-issue registries.
 - [ergo-directory](https://github.com/lavallee/ergo-directory) — An index of published ergo data pages, clustered by subject.
 
-### Knowledge & commitments
+## Knowledge & commitments
 
 - [eno](https://github.com/lavallee/eno) ([docs](https://lavallee.github.io/eno/)) — Structural intelligence and gardening for your Obsidian vault — CLI, MCP, and HTTP.
 - [daymark](https://github.com/lavallee/daymark) — Tasks, plans, recurrence, and durable reminder state for people and their agents.
 
-### Agent intelligence & operations
+## Agent intelligence & operations
 
 - [somm](https://github.com/lavallee/somm) ([docs](https://lavallee.github.io/somm/)) — LLM call management and optimization: telemetry, routing, model memory.
 - [milton](https://github.com/lavallee/milton) — Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.
@@ -39,7 +88,7 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 - [chipsocket](https://github.com/lavallee/chipsocket) — The socket runner for chip, and its minimal second host.
 - [yoinker](https://github.com/lavallee/yoinker) — Understand how it works; yoink what transfers.
 
-### Publishing & visualization
+## Publishing & visualization
 
 - [artoo](https://github.com/lavallee/artoo) ([docs](https://lavallee.github.io/artoo/)) — Self-contained HTML mini-sites that pair a presentation with the research behind it.
 - [artoo-mermaid](https://github.com/lavallee/artoo-mermaid) — Pinned Mermaid diagrams vendored offline into artoo artifacts.
@@ -47,21 +96,19 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 - [des](https://github.com/lavallee/des) ([docs](https://lavallee.github.io/des/)) — Lyra design system.
 - [datasette-dossier](https://github.com/lavallee/datasette-dossier) — Entity-centered, host-themeable dossier views for Datasette.
 
-### Shared surfaces for people and agents
+## Shared surfaces for people and agents
 
 - [toucan](https://github.com/lavallee/toucan) ([docs](https://lavallee.github.io/toucan/)) — An infinite canvas you edit by hand while your agents edit it beside you.
 - [toucan-source-daymark](https://github.com/lavallee/toucan-source-daymark) — A Daymark project as a toucan plan source: boards, gantts and tables that write back.
 - [backfield-client-sdk](https://github.com/lavallee/backfield-client-sdk) — Python SDK + light ADK for backfield.net (zero deps).
 
-### Utilities & experiments
+## Utilities & experiments
 
 - [gipper](https://github.com/lavallee/gipper) ([docs](https://lavallee.github.io/gipper/)) — Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.
 - [oura-cli](https://github.com/lavallee/oura-cli) — Python CLI for the Oura API v2.
 - [llm-bingo](https://github.com/lavallee/llm-bingo) — Bingo for LLM-isms, scored against your own transcripts.
 
-## The log
-
-### November 2026
+## November 2026
 
 **Nov 19 — [artoo v0.11.0](https://github.com/lavallee/artoo/releases/tag/v0.11.0).** Artoo can now say where each rendered block came from: a source map marks every block with the file and lines that produced it (with each file's hash at build time), and `artoo edit` opens an artifact's pages for in-place editing. `[research] publish = false` keeps a private flip projection out of the page while its sources still travel with each block, and collection labels name pages in navigation and breadcrumbs. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
 
@@ -115,7 +162,7 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Nov 05 — [gipper v0.4.1–v0.4.3](https://github.com/lavallee/gipper/releases).** Custody hardening: names that merely describe a secret (`*_PROFILE`, `*_URL`, `*_PATH`…) no longer block uploads, secret detection inside custody files matches only value names that look secret (KEY, TOKEN, SECRET, PASSWORD, AUTH), entries can name the exact keys, and a missing file is reported instead of stopping every upload. 0.4.1 is a documentation and version-consistency patch.
 
-### October 2026
+## October 2026
 
 **Oct 28 — [eno v0.5.0](https://github.com/lavallee/eno/releases/tag/v0.5.0).** Note-proposal review inside Obsidian: an agent queues a proposed rewrite with `scripts/propose_note.py`, and a new plugin command shows both complete versions side by side, applying the proposal only if the note still matches the source the agent read. A shared-notes guide covers the person-and-agent workflow, and tiling-threshold labels calibrate the duplicate-detection bands against reviewed pairs.
 
@@ -133,7 +180,7 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Oct 03 — [oura-cli v0.2.0](https://github.com/lavallee/oura-cli/releases/tag/v0.2.0).** Adds `oura summary` — compact dated JSON for activity and recovery, with distinct missing, incomplete, and conflicting data states — and fixes morning reports, empty-day caching, and heart-rate datetime bounds. The SQLite cache is permission-protected, and new logins add OAuth state and PKCE checks.
 
-### September 2026
+## September 2026
 
 **Sep 05 — [flip-documents v0.1.0–v0.2.0](https://github.com/lavallee/flip-documents/releases).** Original document capture with optional MarkItDown conversion, plus structured XLSX cell extraction through openpyxl — coordinates, string identifiers, types, formula text, and separate caches. Markdown stays a lossy reading derivative, not the record.
 
@@ -147,7 +194,7 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Sep 03 — [flip-github v0.3.0](https://github.com/lavallee/flip-github/releases/tag/v0.3.0).** First public release of the complete GitHub evidence adapter: paginated issue and pull-request comments, merge and review state, Discussions with replies and chosen answers, lifecycle events, deterministic normalized evidence, and separate raw API custody.
 
-### August 2026
+## August 2026
 
 **Aug 30 — [yoinker v0.1.0](https://github.com/lavallee/yoinker/releases/tag/v0.1.0).** First release: an agent skill and dual-harness plugin that explains unfamiliar tools and ideas, checks what transfers to local context, and returns borrow, try, track, or reject decisions with evidence and uncertainty intact.
 
@@ -163,7 +210,7 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Aug 11 — [vizier v0.2.0–v0.3.1](https://github.com/lavallee/vizier/releases).** Four releases in one day. 0.2.0 ships vizier as a Claude Code plugin, with the corpus finally in the wheel (installed copies had been silently answering with nothing). 0.2.1 fixes the 0.1.0 upgrade path, which left upgraded installs reading an empty corpus. 0.3.0 renames the `weaver` source to `principles` — it was named for a private tool nobody outside could see — and names artoo as the companion project. 0.3.1 makes reads refresh the cached corpus index across upgrades, so an upgraded install stops answering with the previous version's rows.
 
-### July 2026
+## July 2026
 
 **Jul 28 — [eno v0.3.0](https://github.com/lavallee/eno/releases/tag/v0.3.0).** A generic OKF v0.2 consumer: standard Markdown links become first-class graph edges (resolved by path arithmetic only — unresolved links stay visible, nothing is guessed), and the portable trust fields ride the rebuildable index into every bounded read as one advisory line. New `eno trust` surfaces advisory candidates: past-stale notes, load-bearing concepts without provenance, generated-after-verified. Echoes, never verdicts.
 

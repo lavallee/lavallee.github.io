@@ -1,0 +1,128 @@
+# Artoo reference — Marc Lavallee
+
+This file is generated. It is deliberately separate from `AGENTS.md` so the full class vocabulary enters context only when it is useful.
+
+## Commands
+
+Every command takes an artifact path, or resolves upward from the working
+directory if you omit it.
+
+| goal | command |
+|------|---------|
+| manifest health, firewall report, library drift | `artoo status .` |
+| refresh inputs, verify, stamp `updated` | `artoo build .` |
+| static and optional browser checks | `artoo verify .` |
+| private finding or resolution tied to this render | `artoo review . "…" --page index.html` |
+| build or interrogate a repository graph | `artoo map --help` |
+| publish (firewall-staged) | `artoo deploy .` |
+| the layout vocabulary, in full | `artoo docs <library>` |
+| everything artoo knows | `artoo docs --all` |
+
+`artoo build` is the check that matters: it runs the manifest's build
+commands, refreshes the provenance projection, verifies the firewall, and
+reports any class used here that its library does not define.
+
+## What publishes
+
+Only `site/`. The artifact directory around it — `work/`, `notebook/`,
+`artifact.toml`, this file — stays in the repo. Inside `site/` the firewall
+still withholds any path segment starting with `_` or `.` (except
+`.nojekyll`), and the research filenames `notebook.md`, `notes.md`,
+`priors.md`, `DECISIONS.md`, `HANDOFF.md`.
+
+That is deny-by-default and structural: `site/_draft/v2.html` is visible to
+you and invisible to the world with no configuration. Put working material in
+`work/`, and drafts under a `_`-prefixed path.
+
+`artoo status .` lists exactly what is being withheld.
+
+## Blocks
+
+Structured pieces of Markdown content are blocks, not hand-written HTML. A block written wrong fails `artoo build` at `file:line` with the fix. Attributes, bodies and examples: `artoo docs blocks`.
+
+| block | use it for |
+|---|---|
+| `::: callout` | a boxed aside for a caveat, warning or result the reader must not miss |
+| `::: stats` | a row of 2–6 headline figures, one `value | label` line each |
+| `::: pullquote` | a breakout-width quotation; attribute it with cite= |
+| `::: pullnumber` | one large figure with its label, breakout width |
+| `::: figure` | caption and source for whatever it wraps — a pipe table, an image, a grid or html block; state vintage and denominator in the caption |
+| `::: wide` | let its contents run wider than the prose column (breakout width) |
+| `::: full` | let its contents run edge to edge |
+| `::: cards` | navigation cards to other pages, one `[Title](page.html) — description` line each |
+| `::: lede` | the opening paragraph, set larger |
+| `::: grid` | a sortable dense table bound to a [[data]] pack; one `field | Title | format flags` line per column. Fields are checked against the pack at build time |
+| `::: html` | raw HTML, copied verbatim — for the figure that carries the argument, or an interaction no block covers. Use kit classes and tokens (`var(--accent)`); the class check, verify, the design lint and the browser checks still apply |
+
+## Layout vocabulary
+
+### artoo-kit 0.8.1
+
+Long-form article layout, evidence regions, and the provenance panel.
+
+Vendored at `site/lib/artoo-kit/`. Read the stylesheets there if you need the exact rule; this table is the vocabulary they define.
+
+| class | role |
+|---|---|
+| `article` | the long-form grid container; children sit in the prose column by default |
+| `article-full` | wrapper: let this child run edge to edge |
+| `article-breakout` | wrapper: wider than prose, still centered |
+| `article-mrow` | row that pairs a prose block with a margin note |
+| `article-masthead` | top bar; `__name` is the artifact link, `__label` the standfirst tag |
+| `article-header` | the title block at the head of the piece |
+| `article-kicker` | small label above the title (conventionally the artifact kind) |
+| `article-title` | the h1 |
+| `article-dek` | standfirst under the title |
+| `article-byline` | publication line; wrap the date in `<time datetime=…>` |
+| `article-lede` | opening paragraph, set larger |
+| `article-figure` | figure wrapper for a table or chart; put vintage, denominator, and source in the `figcaption` |
+| `article-table` | scroll region around a table (Markdown pipe tables get one): wide tables scroll sideways inside it instead of widening the page |
+| `article-loop` | a silent looping video inside an `article-figure` (Markdown: an image whose src is a video); named by `aria-label`, paused with controls for reduced motion, click toggles |
+| `article-toggle` | figure variant: one of 2–4 images or loops shown at a time, switched by labelled radios; `__bar` holds the labels, `__panels` the media (Markdown: a ```` ```toggle ```` fence) |
+| `article-marginnote` | right-gutter note, inline on mobile; `--def`, `--source`, `--callout` variants, `.term` for the term defined |
+| `article-pullquote` | breakout-width quote; attribute it with `<cite>` |
+| `article-pullnumber` | breakout-width figure; `.num` is the value, `.label` its caption |
+| `article-colophon` | how-it-was-made block closing the piece |
+| `site-nav` | multi-page nav; `.brand`, `.nav-toggle` + `.nav-links`, and current-page links (wired by kit.js) |
+| `page` | container for a non-article page; `--narrow` tightens it |
+| `card-grid` | responsive grid of navigation cards |
+| `nav-card` | navigation card; use on links to destinations, not as a generic container |
+| `card` | deprecated compatibility alias for nav-card; prefer nav-card in new work |
+| `callout` | boxed aside with a `.callout-title`; `--warn`, `--danger`, `--success` variants |
+| `badge` | inline label; `--accent`, `--success`, `--warn` variants |
+| `stat-row` | row of figures |
+| `stat` | one figure; `.value` then `.label` |
+| `toc` | table of contents, as an ordered list |
+| `diagram` | wrapper for an inline SVG or an artoo-diagrams Mermaid block |
+| `colophon` | build and provenance footer |
+| `collection-pager` | previous and next navigation at the foot of a collection page |
+| `numeric` | tabular figures, so columns of numbers align |
+| `no-print` | hide this element when the page is printed |
+| `provenance` | the provenance panel root; mark it `data-artoo-provenance` and provenance.js fills it from data/provenance.json |
+| `claim-ref` | written by provenance.js onto `[C7]`-style references; never hand-author it |
+
+This library owns `article-`, `provenance`. A class starting with one of those that the stylesheet does not define is a guess, and `artoo build` fails on it and names the nearest real class. Your own classes go outside those prefixes — they are never second-guessed.
+
+Full prose contract: `artoo docs artoo-kit`.
+
+## Rules
+
+1. **Use the vocabulary above; do not invent classes in its namespaces.** An
+   invented class renders as nothing, which looks like a styling bug and is
+   not one.
+2. **Nothing loads from the network.** The artifact must render from a
+   `file://` URL — no CDN scripts, no remote fonts, no external stylesheets.
+   Vendor a runtime with `artoo lib vendor <name> <url>` and it is recorded
+   with a pinned hash.
+3. **Style SVG with CSS, not presentation attributes.** `fill="var(--chart-1)"`
+   never resolves — SVG presentation attributes are not CSS. Give the shape a
+   class and set `fill` in a `<style>` block, which also lets the chart follow
+   the theme instead of baking one that only reads in light mode.
+   Diagrams of structure are Mermaid rendered by `artoo-diagrams`; give nodes
+   roles (`:::accent`, `:::warn`, `:::muted`) instead of `style` colors.
+4. **A figure earns its place by enabling a valid comparison.** Vintages,
+   denominators, and a source note belong in the `figcaption`.
+
+## More
+
+`artoo docs` lists the manifest, forms, data, evidence, firewall, serving, code maps, generators, and every installed site library.

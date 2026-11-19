@@ -1,21 +1,35 @@
 # lavallee.github.io
 
-The source for [lavallee.github.io](https://lavallee.github.io/): a reverse-chronological, running log of releases from Marc Lavallee's open-source projects — what shipped, what grew, what got fixed, with links to the code, the release, and the docs.
+The source for [lavallee.github.io](https://lavallee.github.io/): Marc Lavallee's homepage, a reverse-chronological running log of releases from his open-source projects — what shipped, what grew, what got fixed, with links to the code, the release, and the docs.
 
-The page is intentionally dependency-free static HTML and CSS (system fonts, no build step, no JS). To preview it locally:
+The page is an **Artoo artifact** living in `homepage/`. Its content is `homepage/content.md`, rendered by `artoo build` into `homepage/site/` and published to the repository root (which GitHub Pages serves) by `artoo deploy`. The committed `index.html` and `lib/` at the root are generated output — edit `homepage/content.md`, never them.
+
+## Editing the page
+
+In place, in the browser, with Copycat:
 
 ```bash
-python3 -m http.server 4173
+artoo edit homepage            # builds, then serves the editor on 127.0.0.1:8916
 ```
 
-Then open <http://127.0.0.1:4173/>.
+Saves write `homepage/content.md` and rebuild automatically; nothing is committed or pushed. For editing from another machine on the network, share the editor through BB Connect:
 
-## Updating the log
+```bash
+bb connect expose 8916
+artoo edit homepage --share-origin https://<machine-label>--8916.<base-domain>
+```
 
-When a project ships a release, add a new `<article class="entry">` at the top of the relevant month section in `index.html` (create a new month section if needed):
+Then open the share URL and edit there. `--share-origin` admits exactly one authenticated https origin; it is not a way to publish.
 
-- date, project name, version tag,
-- a short, honest summary in your own words of what grew and changed,
-- links to the release tag, the repo, and the docs site where one exists.
+## Publishing
 
-Same-day patch releases of the same project can be merged into one entry with a version range (see the `v0.4.1–v0.4.3` gipper entry for the pattern). Update the project index only when a project releases for the first time or a repo's description changes.
+```bash
+artoo build homepage     # render, verify, stamp `updated`
+artoo deploy homepage    # stage the site, copy it to the Pages root, commit, push
+```
+
+`artoo deploy` runs `homepage/deploy.sh`, which copies the firewall-cleared staging tree to the repository root, prunes files the renderer no longer emits, commits, and pushes to `main`. GitHub Pages rebuilds within a couple of minutes.
+
+## Adding a release
+
+Prepend an entry to the top of its month section in `homepage/content.md` (create the month if needed): a bold-lead paragraph with the date, the project, the version linked to its release tag, a short honest summary of what grew and changed, and trailing Code/Docs links. Same-day patch releases of one project merge into a single entry with a version range. Update the project index only when a project first releases or its description changes.

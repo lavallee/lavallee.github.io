@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">ML</title>
-  <rect width="64" height="64" rx="8" fill="#191816"/>
-  <path d="M13 44V19h6l7 13 7-13h6v25h-6V29l-7 12-7-12v15h-6Zm31 0V19h6v19h9v6H44Z" fill="#fffaf0"/>
-  <path d="M8 54h48" stroke="#e84f2f" stroke-width="4"/>
-</svg>

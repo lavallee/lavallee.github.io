@@ -15,6 +15,7 @@ sourcemap = true
 
 [edit]
 comments = "edit/comments.json"
+config = "production/copycat.json"
 
 [deploy]
 target = "command"

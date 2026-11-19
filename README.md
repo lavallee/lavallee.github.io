@@ -12,7 +12,9 @@ In place, in the browser, with Copycat:
 artoo edit homepage            # builds, then serves the editor on 127.0.0.1:8916
 ```
 
-Saves write `homepage/content.md` and rebuild automatically; nothing is committed or pushed. For editing from another machine on the network, share the editor through BB Connect:
+Saves write `homepage/content.md` and rebuild automatically; nothing is committed or pushed. The toolbar's **Agent** panel runs the host's signed-in Codex against the page's source, read-only: ask it to tighten a section, check a link, or apply the open comments, and its proposed edits arrive as a draft you review change by change before anything is saved. The editor config that enables the agent is `homepage/production/copycat.json`, named by `[edit] config` in the manifest — artoo's generated config does not carry the agent block.
+
+For editing from another machine on the network, share the editor through BB Connect:
 
 ```bash
 bb connect expose 8916

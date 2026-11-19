@@ -1,0 +1,52 @@
+{
+  "root": "..",
+  "state": "../work/editor/copycat",
+  "pages": [
+    {
+      "name": "Marc Lavallee",
+      "url": "http://127.0.0.1:8917/release-log/index.html",
+      "selector": "main.article",
+      "serve": {
+        "dir": "site",
+        "path": "/release-log/"
+      },
+      "conflicts": "file",
+      "sourcemap": "work/artoo-sourcemap.json",
+      "sources": [
+        {
+          "file": "artifact.toml",
+          "toml": [
+            "artifact.title"
+          ],
+          "scope": ".site-nav .brand, .article-masthead",
+          "label": "Title"
+        },
+        {
+          "file": "content.md",
+          "markdown": true,
+          "title": true,
+          "frontmatter": [
+            "description"
+          ],
+          "scope": "main.article",
+          "sourceView": true,
+          "status": false
+        }
+      ],
+      "build": {
+        "command": [
+          "artoo",
+          "build",
+          "--no-browser",
+          "."
+        ],
+        "timeout": 300
+      },
+      "comments": "edit/comments.json",
+      "agent": {
+        "preset": "codex",
+        "timeout": 300
+      }
+    }
+  ]
+}

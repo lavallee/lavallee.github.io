@@ -1,9 +1,3 @@
 title: Marc LaVallee
-description: Open-source systems and public experiments for research, decisions, journalism, and creative work with AI.
+description: A running, reverse-chronological log of releases from Marc LaVallee's open-source projects.
 url: https://lavallee.github.io
-exclude:
-  - docs/
-  - artifacts/
-  - scripts/
-  - public-site/
-  - artifact.toml

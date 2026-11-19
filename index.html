@@ -3,345 +3,536 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f3efe6">
-    <meta name="description" content="Marc LaVallee builds open-source tools and public experiments for research, decision-making, journalism, and creative work with AI.">
-    <meta property="og:title" content="Marc LaVallee — Open-source systems for work that matters">
-    <meta property="og:description" content="A connected software factory for research, decisions, and publishing, tested through public-interest sites and open-source tools.">
+    <meta name="description" content="A running, reverse-chronological log of releases from Marc LaVallee's open-source projects — what shipped, what grew, what got fixed, with links to the code and docs.">
+    <meta property="og:title" content="Marc LaVallee — Open-source release log">
+    <meta property="og:description" content="A running log of releases from my open-source projects, newest first.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lavallee.github.io/">
     <meta name="twitter:card" content="summary">
-    <title>Marc LaVallee — Open-source systems for work that matters</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Marc LaVallee — Open-source release log</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to the work</a>
-
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Marc LaVallee, back to top">
-        <span class="wordmark-mark" aria-hidden="true">ML</span>
-        <span>Marc LaVallee</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#why">Why</a>
-        <a href="#public-work">Public work</a>
-        <a href="#open-source">Open source</a>
-        <a class="nav-github" href="https://github.com/lavallee">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
+      <div class="wrap">
+        <h1>Marc LaVallee</h1>
+        <p class="tagline">A running log of open-source releases, newest first. <a href="https://github.com/lavallee">GitHub <span aria-hidden="true">↗</span></a></p>
+        <p class="intro">I build small open-source tools for research, decision-making, journalism, and creative work with AI. This page records what ships from those projects: what grew, what changed, what got fixed. Each entry links to the code, the release, and the docs where they exist.</p>
+      </div>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Open source · public interest · agentic systems</p>
-          <h1 id="hero-title">Beyond the prompt is where the <em>real work</em> starts.</h1>
-          <p class="hero-lede">I’m Marc LaVallee. I’m building a connected software factory for research, decisions, and publishing—with public sites that test the ideas against real communities and real work.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#open-source">Explore the open-source stack <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#public-work">Visit the public experiments <span aria-hidden="true">→</span></a>
-          </div>
-          <p class="hero-premise"><strong>The premise:</strong> AI can produce plenty. The harder question is whether the work remains observable, grounded, reusable, and answerable to people.</p>
-        </div>
+    <nav class="projects" aria-label="Projects with releases">
+      <div class="wrap">
+        <p class="projects-label">Projects in the log</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/artoo">artoo</a> · <a href="https://lavallee.github.io/artoo/">docs</a></span><span class="p-desc">Self-contained HTML mini-sites that pair a presentation with the research behind it.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/artoo-mermaid">artoo-mermaid</a></span><span class="p-desc">Pinned Mermaid diagrams vendored offline into artoo artifacts.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/chip">chip</a></span><span class="p-desc">A contract for portable, versioned operational components.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/chipsocket">chipsocket</a></span><span class="p-desc">The socket runner for chip, and its minimal second host.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/cub">cub</a></span><span class="p-desc">A CLI for Ralph + Beads-style development with harnesses like Claude Code and Codex.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/daymark">daymark</a></span><span class="p-desc">Tasks, plans, recurrence, and durable reminder state for people and their agents.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/eno">eno</a> · <a href="https://lavallee.github.io/eno/">docs</a></span><span class="p-desc">Structural intelligence and gardening for your Obsidian vault — CLI, MCP, and HTTP.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip">flip</a> · <a href="https://lavallee.github.io/flip/">docs</a></span><span class="p-desc">Format and tooling for agent-driven research notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-documents">flip-documents</a></span><span class="p-desc">Original document capture and conversion for Flip notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-github">flip-github</a></span><span class="p-desc">Complete GitHub issue, PR, and Discussion capture for Flip notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-papers">flip-papers</a></span><span class="p-desc">Exact DOI and arXiv evidence capture for Flip notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-publication">flip-publication</a></span><span class="p-desc">Editorial handoff workflow and templates for Flip notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-reddit">flip-reddit</a></span><span class="p-desc">Reddit thread evidence with original Atom custody and a Flip adapter.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-youtube">flip-youtube</a></span><span class="p-desc">Timestamped caption and ASR evidence for Flip notebooks.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/gipper">gipper</a> · <a href="https://lavallee.github.io/gipper/">docs</a></span><span class="p-desc">Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/llm-bingo">llm-bingo</a></span><span class="p-desc">Bingo for LLM-isms, scored against your own transcripts.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/milton">milton</a></span><span class="p-desc">Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/oura-cli">oura-cli</a></span><span class="p-desc">Python CLI for the Oura API v2.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/somm">somm</a> · <a href="https://lavallee.github.io/somm/">docs</a></span><span class="p-desc">LLM call management and optimization: telemetry, routing, model memory.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/spindle">spindle</a> · <a href="https://lavallee.github.io/spindle/">docs</a></span><span class="p-desc">Choose, hand over, and track the skills coding agents use.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/toucan">toucan</a> · <a href="https://lavallee.github.io/toucan/">docs</a></span><span class="p-desc">An infinite canvas you edit by hand while your agents edit it beside you.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/toucan-source-daymark">toucan-source-daymark</a></span><span class="p-desc">A Daymark project as a toucan plan source: boards, gantts and tables that write back.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/vizier">vizier</a> · <a href="https://lavallee.github.io/vizier/">docs</a></span><span class="p-desc">Generate and critique journalistic data visualizations.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/yoinker">yoinker</a></span><span class="p-desc">Understand how it works; yoink what transfers.</span></li>
+        </ul>
+        <p class="projects-label" style="margin-top:1.25rem;">Active but not yet released</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/backfield-client-sdk">backfield-client-sdk</a></span><span class="p-desc">Python SDK + light ADK for backfield.net (zero deps).</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/datasette-dossier">datasette-dossier</a></span><span class="p-desc">Entity-centered, host-themeable dossier views for Datasette.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/des">des</a> · <a href="https://lavallee.github.io/des/">docs</a></span><span class="p-desc">Lyra design system.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/ergo">ergo</a></span><span class="p-desc">Dataset documentation with structured, code-linked known-issue registries.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/ergo-directory">ergo-directory</a></span><span class="p-desc">An index of published ergo data pages, clustered by subject.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-examples">flip-examples</a></span><span class="p-desc">Real, browsable flip notebooks.</span></li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="system-figure" aria-labelledby="system-title">
-          <div class="system-figure-head">
-            <span>One connected loop</span>
-            <span class="live-dot">Built in the open</span>
-          </div>
-          <h2 id="system-title">A media software factory</h2>
-          <ol class="system-loop">
-            <li>
-              <span class="stage-number">01</span>
-              <div><strong>Observe</strong><small>somm · milton</small></div>
-            </li>
-            <li>
-              <span class="stage-number">02</span>
-              <div><strong>Research</strong><small>eno · flip · ergo</small></div>
-            </li>
-            <li>
-              <span class="stage-number">03</span>
-              <div><strong>Shape</strong><small>chip · spindle · vizier · des</small></div>
-            </li>
-            <li>
-              <span class="stage-number">04</span>
-              <div><strong>Publish</strong><small>artoo · public sites</small></div>
-            </li>
-          </ol>
-          <div class="loop-return">
-            <svg viewBox="0 0 120 28" role="img" aria-labelledby="loop-arrow-title loop-arrow-desc">
-              <title id="loop-arrow-title">The learning loop returns to observation</title>
-              <desc id="loop-arrow-desc">A curved arrow connects publishing back to observation.</desc>
-              <path d="M116 4C87 26 33 27 5 7" fill="none" pathLength="1"></path>
-              <path d="M6 7l9-2M6 7l4 9" fill="none"></path>
-            </svg>
-            <span>Use it → learn → feed it back</span>
-          </div>
-        </div>
-      </section>
+    <main class="log">
+      <div class="wrap">
 
-      <section class="origin section-shell" id="why" aria-labelledby="origin-title">
-        <div class="section-label">
-          <span>01</span>
-          <span>Why build</span>
-        </div>
-        <div class="origin-body">
-          <h2 id="origin-title">The work begins at the friction.</h2>
-          <div class="origin-grid">
-            <p class="origin-statement">A problem in reporting, research, or civic life becomes a small tool. The tool gets used hard. If the useful part generalizes, it becomes infrastructure other people can inspect, adapt, and improve.</p>
-            <div class="origin-detail">
-              <p>That path—from personal need to public component—is more interesting to me than building software from a market category backward. It keeps the abstractions honest and the feedback close to the work.</p>
-              <p>The projects here are separate on purpose. A reporter’s notebook should not become a model router; a public school site should not become an agent console. They share contracts and lessons without collapsing into one giant platform.</p>
+        <section class="month" aria-labelledby="m-2026-11">
+          <h2 id="m-2026-11">November 2026</h2>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-19">Nov 19</time><a class="project" href="https://github.com/lavallee/artoo">artoo</a><span class="version">v0.11.0</span></div>
+            <div class="entry-body">
+              <p>Artoo can now say where each rendered block came from: a source map marks every block with the file and lines that produced it (with each file's hash at build time), and <code>artoo edit</code> opens an artifact's pages for in-place editing. <code>[research] publish = false</code> keeps a private flip projection out of the page while its sources still travel with each block, and collection labels name pages in navigation and breadcrumbs.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/artoo/releases/tag/v0.11.0">Release</a><a href="https://github.com/lavallee/artoo">Code</a><a href="https://lavallee.github.io/artoo/">Docs</a></p>
             </div>
-          </div>
-          <div class="principle-ribbon" aria-label="The working method">
-            <span><b>1</b> Start specific</span>
-            <span><b>2</b> Use it for real</span>
-            <span><b>3</b> Preserve the evidence</span>
-            <span><b>4</b> Share what travels</span>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="public-work" id="public-work" aria-labelledby="public-title">
-        <div class="section-shell public-inner">
-          <div class="section-label section-label-light">
-            <span>02</span>
-            <span>Public proving grounds</span>
-          </div>
-          <div class="public-intro">
-            <h2 id="public-title">Not demo reels. Places where the ideas meet people.</h2>
-            <p>Each public site asks a different question and puts a different part of the stack under pressure.</p>
-          </div>
-
-          <div class="experiment-list">
-            <article class="experiment">
-              <span class="experiment-number">01</span>
-              <div class="experiment-main">
-                <p class="experiment-kind">Data &amp; civic life</p>
-                <h3>NJ School Data</h3>
-                <p class="experiment-question">Can public school data be genuinely useful without sanding away its complexity?</p>
-              </div>
-              <p class="experiment-description">A growing collection of data and visualizations for parents and other stakeholders navigating New Jersey schools. Agent-assisted and maintained with human editorial oversight.</p>
-              <a class="experiment-link" href="https://njschooldata.fyi">Visit njschooldata.fyi <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="experiment">
-              <span class="experiment-number">02</span>
-              <div class="experiment-main">
-                <p class="experiment-kind">Journalism &amp; agents</p>
-                <h3>Backfield</h3>
-                <p class="experiment-question">What does a newsroom look like when agents are first-class participants?</p>
-              </div>
-              <p class="experiment-description">An agentic news organization covering AI and media. Agent reporters maintain beats, publish short posts, collaborate on durable artifacts, and pursue enterprise work under named human accountability.</p>
-              <a class="experiment-link" href="https://backfield.net">Visit backfield.net <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="experiment">
-              <span class="experiment-number">03</span>
-              <div class="experiment-main">
-                <p class="experiment-kind">Games &amp; creative systems</p>
-                <h3>Caz Games</h3>
-                <p class="experiment-question">Can an agentic studio learn taste—not just produce volume?</p>
-              </div>
-              <p class="experiment-description">An agentic game studio learning in public how to make games that don’t suck: small releases, visible iteration, and a practical test of where human direction matters most.</p>
-              <a class="experiment-link" href="https://caz.lyra-forge.com">Visit Caz Games <span aria-hidden="true">↗</span></a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="open-source section-shell" id="open-source" aria-labelledby="open-source-title">
-        <div class="section-label">
-          <span>03</span>
-          <span>Open-source stack</span>
-        </div>
-        <div class="ledger-intro">
-          <h2 id="open-source-title">Small tools, connected by the work.</h2>
-          <p>These projects are designed to stand alone. Together, they form a loop for seeing what agents did, giving them better context, preserving evidence, and turning the result into something people can use.</p>
-        </div>
-
-        <div class="project-ledger">
-          <section class="project-family" aria-labelledby="family-observe">
-            <div class="family-intro">
-              <p class="family-index">I</p>
-              <h3 id="family-observe">Know what happened</h3>
-              <p>Observe model calls and agent work closely enough to improve the system instead of guessing.</p>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-19">Nov 19</time><a class="project" href="https://github.com/lavallee/artoo">artoo</a><span class="version">v0.10.4</span></div>
+            <div class="entry-body">
+              <p>Small correctness patch: <code>&amp;</code> is now escaped once, not twice — fixing headings like <code>News &amp; Observer</code> in the on-this-page contents and link URLs with query strings.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/artoo/releases/tag/v0.10.4">Release</a><a href="https://github.com/lavallee/artoo">Code</a><a href="https://lavallee.github.io/artoo/">Docs</a></p>
             </div>
-            <div class="project-rows">
-              <article class="project-row">
-                <h4>somm</h4>
-                <p>Self-hosted LLM telemetry, routing, and model memory. Record calls locally, route across providers, and evaluate workload-to-model fit.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/somm/">Docs</a><a href="https://github.com/lavallee/somm">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>gipper</h4>
-                <p>Run GPU jobs across Runpod and Vast.ai. Compare whole-job costs, collect results, and verify teardown, with estimates that learn from your own runs.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/gipper/">Docs</a><a href="https://github.com/lavallee/gipper">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>milton</h4>
-                <p>Agent-work intelligence. Turn transcripts, runner receipts, gateway ledgers, and Git activity into evidence-graded findings about cost, outcomes, and recurring failure.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/milton">Code</a></div>
-              </article>
-            </div>
-          </section>
+          </article>
 
-          <section class="project-family" aria-labelledby="family-shape">
-            <div class="family-intro">
-              <p class="family-index">II</p>
-              <h3 id="family-shape">Shape how agents work</h3>
-              <p>Make operational knowledge portable, composable, and explicit about its boundaries.</p>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-19">Nov 19</time><a class="project" href="https://github.com/lavallee/gipper">gipper</a><span class="version">v0.6.0</span></div>
+            <div class="entry-body">
+              <p>Gipper can now run Runpod Serverless queue jobs alongside its existing Pod/SSH runner: deploy one reusable endpoint for successive jobs, or a temporary endpoint with verified cleanup, all through a provider-neutral lifecycle with append-only receipts. Non-idempotent creates and submissions are never retried automatically. Still stdlib-only; 116 tests across Python 3.12–3.14 plus live CUDA validation.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/gipper/releases/tag/v0.6.0">Release</a><a href="https://github.com/lavallee/gipper">Code</a><a href="https://lavallee.github.io/gipper/">Docs</a></p>
             </div>
-            <div class="project-rows">
-              <article class="project-row">
-                <h4>chip</h4>
-                <p>Portable operational components that observe declared signals, apply bounded judgment, and produce policy-gated responses with receipts.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/chip">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>spindle</h4>
-                <p>Compose source skills into coherent, surface-specific blends, then render them for the model and harness that will actually use them.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/spindle/">Docs</a><a href="https://github.com/lavallee/spindle">Code</a></div>
-              </article>
-            </div>
-          </section>
+          </article>
 
-          <section class="project-family" aria-labelledby="family-evidence">
-            <div class="family-intro">
-              <p class="family-index">III</p>
-              <h3 id="family-evidence">Keep the work grounded</h3>
-              <p>Give humans and agents durable memory without confusing a fluent answer for evidence.</p>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-19">Nov 19</time><a class="project" href="https://github.com/lavallee/toucan">toucan</a><span class="version">v0.16.0</span></div>
+            <div class="entry-body">
+              <p>Canvases get reflexes: things a canvas fixes by itself the moment they happen — a box whose text outgrew it, a frame that cuts off what it holds, an arrow through a box — each fix one undo step, and nothing runs while a person is dragging or typing. What no reflex can settle becomes an ask, and an agent can answer by teaching the canvas a new reflex.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan/releases/tag/v0.16.0">Release</a><a href="https://github.com/lavallee/toucan">Code</a><a href="https://lavallee.github.io/toucan/">Docs</a></p>
             </div>
-            <div class="project-rows">
-              <article class="project-row">
-                <h4>flip</h4>
-                <p>Reporter’s notebooks for research corpora maintained by humans and agents in the same files. Sources are hashed; claims earn promotion.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/flip">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>eno</h4>
-                <p>Local-first structural intelligence for a markdown vault. Find what is orphaned, stale, connected, or worth resurfacing—without loading the whole brain into a prompt.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/eno/">Docs</a><a href="https://github.com/lavallee/eno">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>ergo</h4>
-                <p>Dataset documentation built around the caveats that determine justified use: stable issue IDs, machine-readable scope, and links to the code that compensates.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/ergo">Code</a></div>
-              </article>
-            </div>
-          </section>
+          </article>
 
-          <section class="project-family" aria-labelledby="family-publish">
-            <div class="family-intro">
-              <p class="family-index">IV</p>
-              <h3 id="family-publish">Make the result legible</h3>
-              <p>Turn evidence into artifacts, charts, and interfaces that can travel without losing their meaning.</p>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-19">Nov 19</time><a class="project" href="https://github.com/lavallee/daymark">daymark</a><span class="version">v0.7.0</span></div>
+            <div class="entry-body">
+              <p>New verbs carry work between people and agents: <code>ask</code> puts a question with up to six options on a task, <code>answer</code> records the reply, <code>watch</code> blocks until another actor changes it, and <code>followup</code> leaves an agent task that becomes ready on a timer. <code>explore</code> now reports conditions whose advancing work finished after they were last assessed. No schema change.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/daymark/releases/tag/v0.7.0">Release</a><a href="https://github.com/lavallee/daymark">Code</a></p>
             </div>
-            <div class="project-rows">
-              <article class="project-row">
-                <h4>artoo</h4>
-                <p>Self-contained HTML mini-sites that pair a presentation with its research, vendor every asset, and keep private source material out of the deployed artifact.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/artoo/">Docs</a><a href="https://github.com/lavallee/artoo">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>artoo-mermaid</h4>
-                <p>Offline, pinned Mermaid diagrams for Artoo artifacts—so an explanatory visual keeps rendering from local files, forever.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/artoo-mermaid">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>des</h4>
-                <p>An audience-aware design engineering practice and production vocabulary for accessible, evidence-honest operator, editorial, public-data, and marketing surfaces.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/des/">Docs</a><a href="https://github.com/lavallee/des">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>vizier</h4>
-                <p>Deterministic chart-form guidance and color math, plus corpus-backed critique. What it suggests is what it would pass.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/vizier/">Docs</a><a href="https://github.com/lavallee/vizier">Code</a></div>
-              </article>
-              <article class="project-row">
-                <h4>toucan</h4>
-                <p>An infinite canvas in the browser that you edit by hand while your agents edit it beside you, through a CLI and a built-in chat.</p>
-                <div class="project-links"><a href="https://lavallee.github.io/toucan/">Docs</a><a href="https://github.com/lavallee/toucan">Code</a></div>
-              </article>
-            </div>
-          </section>
+          </article>
 
-          <section class="project-family" aria-labelledby="family-participate">
-            <div class="family-intro">
-              <p class="family-index">V</p>
-              <h3 id="family-participate">Let agents participate</h3>
-              <p>Build social surfaces where machine participation is useful because its identity and accountability are clear.</p>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-18">Nov 18</time><a class="project" href="https://github.com/lavallee/daymark">daymark</a><span class="version">v0.6.0</span></div>
+            <div class="entry-body">
+              <p>Daymark reviews agreed deadlines and outstanding replies on the person's local calendar day, recovers a previous agent's handoff with compact startup and a portable activity checkpoint, and generates workspace-specific launch configuration for Claude Code or Codex.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/daymark/releases/tag/v0.6.0">Release</a><a href="https://github.com/lavallee/daymark">Code</a></p>
             </div>
-            <div class="project-rows">
-              <article class="project-row">
-                <h4>backfield-client-sdk</h4>
-                <p>A zero-dependency Python SDK for Backfield, where agents can participate as first-class citizens when they are legible, governed, and answerable to a named human.</p>
-                <div class="project-links"><a href="https://github.com/lavallee/backfield-client-sdk">Code</a></div>
-              </article>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-18">Nov 18</time><a class="project" href="https://github.com/lavallee/toucan-source-daymark">toucan-source-daymark</a><span class="version">v0.1.2</span></div>
+            <div class="entry-body">
+              <p>Tracks Daymark 0.6.0 with the existing schema 6 and the toucan plan protocol. No wire-format change.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan-source-daymark/releases/tag/v0.1.2">Release</a><a href="https://github.com/lavallee/toucan-source-daymark">Code</a></p>
             </div>
-          </section>
-        </div>
-      </section>
+          </article>
 
-      <section class="building" aria-labelledby="building-title">
-        <div class="section-shell building-inner">
-          <div class="section-label section-label-light">
-            <span>04</span>
-            <span>Building principles</span>
-          </div>
-          <div class="building-lead">
-            <h2 id="building-title">Fast output makes judgment more important, not less.</h2>
-            <p>Most of the code in these repositories is generated with AI. Much of it is alpha. Publishing the work is part of the discipline: contracts, tests, provenance, limitations, and failure modes become inspectable.</p>
-          </div>
-          <div class="principles-list">
-            <article>
-              <span>01</span>
-              <h3>Evidence before confidence</h3>
-              <p>Receipts, sources, and caveats should survive the model call that used them.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Local first when it matters</h3>
-              <p>Private notes and operational traces should not need to leave the systems that own them.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Human authority stays visible</h3>
-              <p>Agents can act, report, and create—but consequential judgment needs a named owner.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Open the reusable layer</h3>
-              <p>Share the component that travels; preserve the local context that makes a product useful.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-17">Nov 17</time><a class="project" href="https://github.com/lavallee/somm">somm</a><span class="version">v0.29.0</span></div>
+            <div class="entry-body">
+              <p>Adds Vast.ai balance reads, free <code>/v1/models</code> access checks for TypeSafe (Jev) and SubQ — the vendors with no balance API — and <code>credit_refusals</code> in <code>somm plans --json</code>: calls refused for lack of credit per provider over 30 days, which for those vendors is the only signal that credit ran out.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/somm/releases/tag/v0.29.0">Release</a><a href="https://github.com/lavallee/somm">Code</a><a href="https://lavallee.github.io/somm/">Docs</a></p>
+            </div>
+          </article>
 
-      <section class="closing section-shell" aria-labelledby="closing-title">
-        <p class="eyebrow">The repos are the invitation</p>
-        <h2 id="closing-title">Use a tool. Fork an idea. Tell me where the abstraction breaks.</h2>
-        <p>The work is public because useful systems get better when people can inspect the seams—not because every experiment is finished.</p>
-        <a class="button button-primary" href="https://github.com/lavallee">Explore all projects on GitHub <span aria-hidden="true">↗</span></a>
-      </section>
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-17">Nov 17</time><a class="project" href="https://github.com/lavallee/somm">somm</a><span class="version">v0.28.0</span></div>
+            <div class="entry-body">
+              <p><code>somm plans --json</code> gains prepaid balances for pay-as-you-go accounts: deepseek, openrouter, and runpod, each read with that account's own key from the environment. A missing key reads as nothing; a failed read is reported with its error.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/somm/releases/tag/v0.28.0">Release</a><a href="https://github.com/lavallee/somm">Code</a><a href="https://lavallee.github.io/somm/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-17">Nov 17</time><a class="project" href="https://github.com/lavallee/cub">cub</a><span class="version">v0.29.3</span></div>
+            <div class="entry-body">
+              <p>Plan-execution hardening: hook shims call the installed cub-hooks entry point, an activity-based circuit breaker catches stuck subprocesses, runs stop on budget exhaustion and interrupts, and streaming harness hangs are prevented.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/cub/releases/tag/v0.29.3">Release</a><a href="https://github.com/lavallee/cub">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-16">Nov 16</time><a class="project" href="https://github.com/lavallee/gipper">gipper</a><span class="version">v0.5.0</span></div>
+            <div class="entry-body">
+              <p>Runpod retired REST v1 on 2026-11-16, so every Runpod call from 0.4.3 and earlier fails. This release moves gipper's adapter to v2: prices and stock, pods, network volumes, and billing all read from the new routes, with per-page pod listing. Read paths were run against the live v2 API; pod create is checked against the v2 schema only.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/gipper/releases/tag/v0.5.0">Release</a><a href="https://github.com/lavallee/gipper">Code</a><a href="https://lavallee.github.io/gipper/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-16">Nov 16</time><a class="project" href="https://github.com/lavallee/flip">flip</a><span class="version">v0.24.0</span></div>
+            <div class="entry-body">
+              <p>Follow and steer a notebook from outside the session that is working it — everything is a file plus a read command, no service. Every write appends to <code>log/events.jsonl</code> (<code>flip events</code>), <code>flip snapshot</code> returns the whole notebook as one JSON document, leads from <code>flip find</code> are kept in a file you can list and dismiss, and directives print first in <code>flip next</code>. Also fixes two concurrent writers being granted the same id.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip/releases/tag/v0.24.0">Release</a><a href="https://github.com/lavallee/flip">Code</a><a href="https://lavallee.github.io/flip/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-15">Nov 15</time><a class="project" href="https://github.com/lavallee/daymark">daymark</a><span class="version">v0.5.0</span></div>
+            <div class="entry-body">
+              <p>Daymark is rebuilt in layers: a kernel that stores what is true, and nine named strategies above it that return advice, never a write, each labelled with how well its idea is supported. Profiles (<code>plain</code>, <code>assistant</code>, <code>gentle</code>, <code>dense</code>) choose what to offer; conditions record what must be true for a goal. The schema upgrade to 6 is one-way — back up before installing.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/daymark/releases/tag/v0.5.0">Release</a><a href="https://github.com/lavallee/daymark">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-15">Nov 15</time><a class="project" href="https://github.com/lavallee/somm">somm</a><span class="version">v0.27.0</span></div>
+            <div class="entry-body">
+              <p><code>somm plans --json</code> gains <code>vendor</code>: what the vendor itself reports for each plan window, next to what somm metered. On release day MiniMax reported 90% of the week used against 46% metered — the two views are both true. Also locks <code>opentelemetry-api</code> for CVE-2026-126360.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/somm/releases/tag/v0.27.0">Release</a><a href="https://github.com/lavallee/somm">Code</a><a href="https://lavallee.github.io/somm/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-13">Nov 13</time><a class="project" href="https://github.com/lavallee/toucan">toucan</a><span class="version">v0.15.1</span></div>
+            <div class="entry-body">
+              <p>Fixes a 0.15.0 plugin-trust bug: a server running sandboxed (a systemd user unit with <code>PrivateTmp</code>, a rootless container) saw root's folders as belonging to "nobody" and refused every plugin, including profile sources 0.14 had found.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan/releases/tag/v0.15.1">Release</a><a href="https://github.com/lavallee/toucan">Code</a><a href="https://lavallee.github.io/toucan/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-13">Nov 13</time><a class="project" href="https://github.com/lavallee/toucan">toucan</a><span class="version">v0.15.0</span></div>
+            <div class="entry-body">
+              <p>A canvas can bind to a project kept somewhere else and show it as views that stay in step both ways: a kanban board, a gantt with a real date axis, a timeline, a dependency graph, and a table. Upstream changes redraw the views; a person's edits are written back as field changes, with a conflict notice when upstream refuses. Only shapes carrying <code>meta.plan</code> are ever touched — what people draw around a view is left alone.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan/releases/tag/v0.15.0">Release</a><a href="https://github.com/lavallee/toucan">Code</a><a href="https://lavallee.github.io/toucan/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-13">Nov 13</time><a class="project" href="https://github.com/lavallee/daymark">daymark</a><span class="version">v0.4.0</span></div>
+            <div class="entry-body">
+              <p>Projects, as plain or as structured as the work needs: stages kept consistent with status both ways, manual ordering, item types with hierarchy and roll-ups, milestones, goals, typed custom fields, five presets, and <code>daymark plan</code> for a whole project in one read. The stored schema moves to 5 and the upgrade is one-way — back up first.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/daymark/releases/tag/v0.4.0">Release</a><a href="https://github.com/lavallee/daymark">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-13">Nov 13</time><a class="project" href="https://github.com/lavallee/toucan-source-daymark">toucan-source-daymark</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>First release: a Daymark project as a toucan plan source. Boards, gantts, timelines, dependency graphs, and tables that write back; works with Daymark 0.4.0 and toucan 0.15.0 or newer. It never creates or upgrades a database.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan-source-daymark/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/toucan-source-daymark">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-12">Nov 12</time><a class="project" href="https://github.com/lavallee/toucan">toucan</a><span class="version">v0.14.0</span></div>
+            <div class="entry-body">
+              <p>Animate records a GIF of the diagram building up — box by box in the order the arrows go, a fork's branches arriving together, the whole diagram held at the end. Arrows now go round boxes instead of through them, on both engines, with elbow midpoints readable and writable.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan/releases/tag/v0.14.0">Release</a><a href="https://github.com/lavallee/toucan">Code</a><a href="https://lavallee.github.io/toucan/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-11">Nov 11</time><a class="project" href="https://github.com/lavallee/toucan">toucan</a><span class="version">v0.13.0</span></div>
+            <div class="entry-body">
+              <p>Every routine now says what it's for and when to use it, grouped in the Routines menu and searchable. <code>toucan routine suggest</code> finds code agents keep writing by hand and offers to bank it as a routine; the work log behind it records every agent run that changes a canvas. Templates became addable blocks — eleven new ones — rather than whole canvases you start from.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/toucan/releases/tag/v0.13.0">Release</a><a href="https://github.com/lavallee/toucan">Code</a><a href="https://lavallee.github.io/toucan/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-10">Nov 10</time><a class="project" href="https://github.com/lavallee/artoo">artoo</a><span class="version">v0.10.3</span></div>
+            <div class="entry-body">
+              <p><code>artoo deploy</code> in branch mode no longer refuses its own second deploy: once GitHub Pages serves the publishing branch, detection no longer mistakes the site for docs mode.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/artoo/releases/tag/v0.10.3">Release</a><a href="https://github.com/lavallee/artoo">Code</a><a href="https://lavallee.github.io/artoo/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-10">Nov 10</time><a class="project" href="https://github.com/lavallee/daymark">daymark</a><span class="version">v0.3.0</span></div>
+            <div class="entry-body">
+              <p>Adds <code>focus</code> — the person's own ordered short list, leading <code>ready</code> — plus scope filters within a workspace, and <code>daymark workspaces</code> / <code>daymark prime</code>. The schema upgrades in place on first open; back up first.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/daymark/releases/tag/v0.3.0">Release</a><a href="https://github.com/lavallee/daymark">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-10">Nov 10</time><a class="project" href="https://github.com/lavallee/somm">somm</a><span class="version">v0.26.1–v0.26.2</span></div>
+            <div class="entry-body">
+              <p>Two patch releases: <code>somm-mcp</code> installs again (the 2.x MCP SDK renamed <code>FastMCP</code>; the dependency is now <code>mcp&gt;=1.30.0,&lt;2</code>), <code>OllamaProvider._client()</code> returns as the one seam every request goes through, <code>exact_max_tokens</code> sends the token cap as given, and the free OpenRouter roster drops a model that left the catalog.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/somm/releases">Releases</a><a href="https://github.com/lavallee/somm">Code</a><a href="https://lavallee.github.io/somm/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-07">Nov 07</time><a class="project" href="https://github.com/lavallee/artoo">artoo</a><span class="version">v0.10.1–v0.10.2</span></div>
+            <div class="entry-body">
+              <p>The docs site gains a grouped features list — everything artoo does, with how you reach each feature and the release it arrived in, generated from a JSON file other tools can read. <code>work/verification/</code> ignores its own output so screenshots stop churning in Git, and multi-option toggles no longer run off a phone screen.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/artoo/releases">Releases</a><a href="https://github.com/lavallee/artoo">Code</a><a href="https://lavallee.github.io/artoo/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-07">Nov 07</time><a class="project" href="https://github.com/lavallee/flip">flip</a><span class="version">v0.23.0</span></div>
+            <div class="entry-body">
+              <p>Adds a built-in <code>repeatable-gain</code> workflow for turning recurring notebook problems into checked improvements, reusable extensions, or evidenced lessons, plus active-work guidance across the authoring skills. Fixes workflow continuation to choose the latest session by its recorded opening time rather than filename order, and names a config that doesn't parse instead of misreporting it.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip/releases/tag/v0.23.0">Release</a><a href="https://github.com/lavallee/flip">Code</a><a href="https://lavallee.github.io/flip/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-11-05">Nov 05</time><a class="project" href="https://github.com/lavallee/gipper">gipper</a><span class="version">v0.4.1–v0.4.3</span></div>
+            <div class="entry-body">
+              <p>Custody hardening: names that merely describe a secret (<code>*_PROFILE</code>, <code>*_URL</code>, <code>*_PATH</code>…) no longer block uploads, secret detection inside custody files matches only value names that look secret (KEY, TOKEN, SECRET, PASSWORD, AUTH), entries can name the exact keys, and a missing file is reported instead of stopping every upload. 0.4.1 is a documentation and version-consistency patch.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/gipper/releases">Releases</a><a href="https://github.com/lavallee/gipper">Code</a><a href="https://lavallee.github.io/gipper/">Docs</a></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="month" aria-labelledby="m-2026-10">
+          <h2 id="m-2026-10">October 2026</h2>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-28">Oct 28</time><a class="project" href="https://github.com/lavallee/eno">eno</a><span class="version">v0.5.0</span></div>
+            <div class="entry-body">
+              <p>Note-proposal review inside Obsidian: an agent queues a proposed rewrite with <code>scripts/propose_note.py</code>, and a new plugin command shows both complete versions side by side, applying the proposal only if the note still matches the source the agent read. A shared-notes guide covers the person-and-agent workflow, and tiling-threshold labels calibrate the duplicate-detection bands against reviewed pairs.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/eno/releases/tag/v0.5.0">Release</a><a href="https://github.com/lavallee/eno">Code</a><a href="https://lavallee.github.io/eno/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-17">Oct 17</time><a class="project" href="https://github.com/lavallee/spindle">spindle</a><span class="version">v0.4.2</span></div>
+            <div class="entry-body">
+              <p>Catalog refs use the skill's directory name when its frontmatter <code>name</code> is a display name, so every ref can be passed to <code>spindle use</code>; quoted frontmatter values are unescaped.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/spindle/releases/tag/v0.4.2">Release</a><a href="https://github.com/lavallee/spindle">Code</a><a href="https://lavallee.github.io/spindle/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-13">Oct 13</time><a class="project" href="https://github.com/lavallee/spindle">spindle</a><span class="version">v0.4.1</span></div>
+            <div class="entry-body">
+              <p><code>spindle brief --json</code> returns <code>read_roots</code> — the directories holding every catalog skill — for runtimes that restrict what an agent may read, and <code>spindle house setup --here</code> reports vendored skills the repository's ignore rules exclude.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/spindle/releases/tag/v0.4.1">Release</a><a href="https://github.com/lavallee/spindle">Code</a><a href="https://lavallee.github.io/spindle/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-13">Oct 13</time><a class="project" href="https://github.com/lavallee/spindle">spindle</a><span class="version">v0.4.0</span></div>
+            <div class="entry-body">
+              <p>The house and the catalog: one versioned directory holds the rules every harness loads, a small kernel of always-installed skills, and named project patterns — installed per machine for Claude Code, Codex, and Hermes. <code>spindle catalog</code> indexes skills from commit-pinned sources without installing or running anything, and reports what a newer upstream commit would change before the pin moves. <code>spindle find</code> / <code>use</code> / <code>report</code> rank skills per task, hand them over, and record outcomes that feed back into ranking.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/spindle/releases/tag/v0.4.0">Release</a><a href="https://github.com/lavallee/spindle">Code</a><a href="https://lavallee.github.io/spindle/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-12">Oct 12</time><a class="project" href="https://github.com/lavallee/chipsocket">chipsocket</a><span class="version">v0.2.0–v0.2.2</span></div>
+            <div class="entry-body">
+              <p>The socket runner for chip goes public: <code>learn.cuts</code> finds the widest band at each end of a member's score where a constant answer meets a precision bar, <code>banded()</code> confines a member to a score band, and <code>recorded()</code> seats an answer produced elsewhere as a member. Receipts land one file per UTC day. Fast follow-ups made cuts judge each score bucket on its own (with a <code>thin: true</code> marker when a cut was withheld for too few inputs) and pool thin buckets instead of stepping over them.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/chipsocket/releases">Releases</a><a href="https://github.com/lavallee/chipsocket">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-12">Oct 12</time><a class="project" href="https://github.com/lavallee/chip">chip</a><span class="version">v0.4.0</span></div>
+            <div class="entry-body">
+              <p>Leads with the ladder: <code>chip.placement</code> turns daily evidence into a closed-vocabulary verdict — <code>observer</code>, <code>mint</code>, <code>parser</code>, or one of four honest refusals — using six rules that survived a hand-run over 1.1M production calls. <code>docs/socket.md</code> documents one contract with several live implementations, and the chip-socket skill ships as the eighth agent skill in the Lyra Forge marketplace.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/chip/releases/tag/v0.4.0">Release</a><a href="https://github.com/lavallee/chip">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-12">Oct 12</time><a class="project" href="https://github.com/lavallee/spindle">spindle</a><span class="version">v0.3.0</span></div>
+            <div class="entry-body">
+              <p>Conjunctive outcome gates for paired evaluations — one missing, malformed, or false gate blocks promotion regardless of mean score, with the exact failed case reported. Evaluation manifests reject unknown keys, and job-scoped leases let external dispatchers hold an explicit skill set per dispatched job, reconciled on startup when a job dies without releasing.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/spindle/releases/tag/v0.3.0">Release</a><a href="https://github.com/lavallee/spindle">Code</a><a href="https://lavallee.github.io/spindle/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-10-03">Oct 03</time><a class="project" href="https://github.com/lavallee/oura-cli">oura-cli</a><span class="version">v0.2.0</span></div>
+            <div class="entry-body">
+              <p>Adds <code>oura summary</code> — compact dated JSON for activity and recovery, with distinct missing, incomplete, and conflicting data states — and fixes morning reports, empty-day caching, and heart-rate datetime bounds. The SQLite cache is permission-protected, and new logins add OAuth state and PKCE checks.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/oura-cli/releases/tag/v0.2.0">Release</a><a href="https://github.com/lavallee/oura-cli">Code</a></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="month" aria-labelledby="m-2026-09">
+          <h2 id="m-2026-09">September 2026</h2>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-05">Sep 05</time><a class="project" href="https://github.com/lavallee/flip-documents">flip-documents</a><span class="version">v0.1.0–v0.2.0</span></div>
+            <div class="entry-body">
+              <p>Original document capture with optional MarkItDown conversion, plus structured XLSX cell extraction through openpyxl — coordinates, string identifiers, types, formula text, and separate caches. Markdown stays a lossy reading derivative, not the record.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-documents/releases">Releases</a><a href="https://github.com/lavallee/flip-documents">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-05">Sep 05</time><a class="project" href="https://github.com/lavallee/flip-papers">flip-papers</a><span class="version">v0.1.0–v0.1.1</span></div>
+            <div class="entry-body">
+              <p>Exact Crossref DOI and arXiv evidence capture with retained response bytes and explicit metadata/full-text status; 0.1.1 rejects incomplete declared bodies, invalid lengths, and unsupported encodings. A live arXiv full-text capture was confirmed against its first-page text; Unpaywall full text still needs a real operator email for live validation.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-papers/releases">Releases</a><a href="https://github.com/lavallee/flip-papers">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-05">Sep 05</time><a class="project" href="https://github.com/lavallee/flip-reddit">flip-reddit</a><span class="version">v0.1.0–v0.2.1</span></div>
+            <div class="entry-body">
+              <p>Partial Reddit Atom captures with original-bytes custody and explicit coverage, plus an optional PRAW backend with explicit request and expansion limits, parentage, and unresolved placeholders. Authenticated live acquisition remains unverified without usable application credentials.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-reddit/releases">Releases</a><a href="https://github.com/lavallee/flip-reddit">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-05">Sep 05</time><a class="project" href="https://github.com/lavallee/flip-youtube">flip-youtube</a><span class="version">v0.1.0–v0.2.0</span></div>
+            <div class="entry-body">
+              <p>Timestamped caption and local-ASR evidence using an optional youtube-transcript-api backend; 0.2.0 adds deterministic bundle archives, so Flip detects transcript changes with identical retained ASR audio, plus explicit yt-dlp acquisition. Live API access was rate-limited in testing, so no live accuracy is claimed.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-youtube/releases">Releases</a><a href="https://github.com/lavallee/flip-youtube">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-05">Sep 05</time><a class="project" href="https://github.com/lavallee/flip-publication">flip-publication</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>Definition-only editorial handoff workflow, skill, and templates for Flip notebooks, reusing Flip audit/export with Pandoc or Quarto rendering. A preview is not publication; CSL exports get reviewed before sharing.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-publication/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/flip-publication">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-09-03">Sep 03</time><a class="project" href="https://github.com/lavallee/flip-github">flip-github</a><span class="version">v0.3.0</span></div>
+            <div class="entry-body">
+              <p>First public release of the complete GitHub evidence adapter: paginated issue and pull-request comments, merge and review state, Discussions with replies and chosen answers, lifecycle events, deterministic normalized evidence, and separate raw API custody.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip-github/releases/tag/v0.3.0">Release</a><a href="https://github.com/lavallee/flip-github">Code</a></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="month" aria-labelledby="m-2026-08">
+          <h2 id="m-2026-08">August 2026</h2>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-30">Aug 30</time><a class="project" href="https://github.com/lavallee/yoinker">yoinker</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>First release: an agent skill and dual-harness plugin that explains unfamiliar tools and ideas, checks what transfers to local context, and returns borrow, try, track, or reject decisions with evidence and uncertainty intact.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/yoinker/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/yoinker">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-30">Aug 30</time><a class="project" href="https://github.com/lavallee/eno">eno</a><span class="version">v0.4.0</span></div>
+            <div class="entry-body">
+              <p>Bounded, source-attributed search across repo-local flip notebooks: consumes Flip registry JSONL, ignores worktree copies, reports shadowed lineages, and adds FTS body search — all without loading the whole vault into a prompt. Also re-establishes the 0.x release boundary after an accidental major version briefly went out.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/eno/releases/tag/v0.4.0">Release</a><a href="https://github.com/lavallee/eno">Code</a><a href="https://lavallee.github.io/eno/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-30">Aug 30</time><a class="project" href="https://github.com/lavallee/flip">flip</a><span class="version">v0.22.0</span></div>
+            <div class="entry-body">
+              <p>The work loop is public and extensible: one core <code>flip next</code> lifecycle (orient → select → open → work → check → close), a TOML workflow registry, local plugin, extension, hook, and filter registries, and three packaged authoring skills. Executable handlers require explicit scope enablement and capabilities.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip/releases/tag/v0.22.0">Release</a><a href="https://github.com/lavallee/flip">Code</a><a href="https://lavallee.github.io/flip/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-29">Aug 29</time><a class="project" href="https://github.com/lavallee/flip">flip</a><span class="version">v0.21.1</span></div>
+            <div class="entry-body">
+              <p>Makes the installation and first-run path match the product: layered onboarding, a network-free quickstart, installed-wheel smoke tests on Linux, macOS, and Windows, and mechanical validation for version lockstep, plugin manifests, and documentation links. Codex is detected and attributed before a notebook seeds its first question.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip/releases/tag/v0.21.1">Release</a><a href="https://github.com/lavallee/flip">Code</a><a href="https://lavallee.github.io/flip/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-27">Aug 27</time><a class="project" href="https://github.com/lavallee/llm-bingo">llm-bingo</a><span class="version">v0.2.0–v0.2.1</span></div>
+            <div class="entry-body">
+              <p>Codex support via plugin manifest and catalog, one launcher for every install path, and a readable failure on old Pythons instead of <code>ModuleNotFoundError</code>. 0.2.1 fixes <code>score</code> counting the tool's own output — a rendered board self-matches 15 of its own 24 squares.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/llm-bingo/releases">Releases</a><a href="https://github.com/lavallee/llm-bingo">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-18">Aug 18</time><a class="project" href="https://github.com/lavallee/flip">flip</a><span class="version">v0.21.0</span></div>
+            <div class="entry-body">
+              <p>A citation is a reference, and only a reference: <code>--source</code> and <code>--about</code> now refuse an id from another series — a question id is not a source — before the id is allocated, with messages that name the series and the right verb. Previously a reassuring message papered over a wrong-world citation, and five claims in one notebook carried it before anyone noticed.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/flip/releases/tag/v0.21.0">Release</a><a href="https://github.com/lavallee/flip">Code</a><a href="https://lavallee.github.io/flip/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-08-11">Aug 11</time><a class="project" href="https://github.com/lavallee/vizier">vizier</a><span class="version">v0.2.0–v0.3.1</span></div>
+            <div class="entry-body">
+              <p>Four releases in one day. 0.2.0 ships vizier as a Claude Code plugin, with the corpus finally in the wheel (installed copies had been silently answering with nothing). 0.2.1 fixes the 0.1.0 upgrade path, which left upgraded installs reading an empty corpus. 0.3.0 renames the <code>weaver</code> source to <code>principles</code> — it was named for a private tool nobody outside could see — and names artoo as the companion project. 0.3.1 makes reads refresh the cached corpus index across upgrades, so an upgraded install stops answering with the previous version's rows.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/vizier/releases">Releases</a><a href="https://github.com/lavallee/vizier">Code</a><a href="https://lavallee.github.io/vizier/">Docs</a></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="month" aria-labelledby="m-2026-07">
+          <h2 id="m-2026-07">July 2026</h2>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-28">Jul 28</time><a class="project" href="https://github.com/lavallee/eno">eno</a><span class="version">v0.3.0</span></div>
+            <div class="entry-body">
+              <p>A generic OKF v0.2 consumer: standard Markdown links become first-class graph edges (resolved by path arithmetic only — unresolved links stay visible, nothing is guessed), and the portable trust fields ride the rebuildable index into every bounded read as one advisory line. New <code>eno trust</code> surfaces advisory candidates: past-stale notes, load-bearing concepts without provenance, generated-after-verified. Echoes, never verdicts.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/eno/releases/tag/v0.3.0">Release</a><a href="https://github.com/lavallee/eno">Code</a><a href="https://lavallee.github.io/eno/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-22">Jul 22</time><a class="project" href="https://github.com/lavallee/llm-bingo">llm-bingo</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>First release: bingo for LLM-isms, scored against your own Claude transcripts.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/llm-bingo/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/llm-bingo">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-18">Jul 18</time><a class="project" href="https://github.com/lavallee/milton">milton</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>First release: a dependency-free, local-first evidence accounting foundation for AI work — twelve read-only source adapters across agents, gateways, runners, work registries, and Git; reported-vs-computed cost with explicit precedence; and selected-spend traces through directed work relations, with conservation checks.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/milton/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/milton">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-17">Jul 17</time><a class="project" href="https://github.com/lavallee/chip">chip</a><span class="version">v0.1.0–v0.2.0</span></div>
+            <div class="entry-body">
+              <p>The chip contract goes public: <code>chip.spec/v0alpha1</code> with fail-closed validation, a host conformance kit (quiet and duplicate runs produce no effects, invalid judgment fails closed), and example chips proven end-to-end on the reference host. 0.2.0 adds the delegation profile, prunable manifest hints, environment profiles, partitioned state for map-class chips, and lifecycle telemetry.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/chip/releases">Releases</a><a href="https://github.com/lavallee/chip">Code</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-17">Jul 17</time><a class="project" href="https://github.com/lavallee/eno">eno</a><span class="version">v0.2.0</span></div>
+            <div class="entry-body">
+              <p>flip-bundle awareness without any dependency on flip: bundle detection from frontmatter, the workspace handle table read at index time, and scoped wikilink resolution — unknown handle or unknown id stays unresolved, never a guess. The garden classifies unresolved id-shaped references as flip refs with actionable hints, not concept candidates.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/eno/releases/tag/v0.2.0">Release</a><a href="https://github.com/lavallee/eno">Code</a><a href="https://lavallee.github.io/eno/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-14">Jul 14</time><a class="project" href="https://github.com/lavallee/eno">eno</a><span class="version">v0.1.1</span></div>
+            <div class="entry-body">
+              <p>Documentation and onboarding: a synthetic demo vault exercising every eno feature — orphans, stubs, drift, frontier — so a two-minute hello-world shows real signal, plus a "how eno works" page with CVD-safe charts chosen with vizier.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/eno/releases/tag/v0.1.1">Release</a><a href="https://github.com/lavallee/eno">Code</a><a href="https://lavallee.github.io/eno/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-11">Jul 11</time><a class="project" href="https://github.com/lavallee/vizier">vizier</a><span class="version">v0.1.0</span></div>
+            <div class="entry-body">
+              <p>First public release: a deterministic chart toolkit — validate, suggest-palette, suggest-ramp, ink, recommend-form, every suggestion validated before it's returned — plus 43 chart forms across the nine FT Visual Vocabulary families, corpus-backed critique routed through somm, and an MCP server. Published to PyPI as <code>datavizier</code>.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/vizier/releases/tag/v0.1.0">Release</a><a href="https://github.com/lavallee/vizier">Code</a><a href="https://lavallee.github.io/vizier/">Docs</a></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head"><time datetime="2026-07-11">Jul 11</time><a class="project" href="https://github.com/lavallee/artoo-mermaid">artoo-mermaid</a><span class="version">v11.16.0</span></div>
+            <div class="entry-body">
+              <p>Mermaid 11.16.0 as an artoo site library: <code>artoo lib add mermaid</code> vendors a pinned, hash-recorded <code>mermaid.min.js</code> into any artifact, so explanatory diagrams keep rendering from local files forever. The package version tracks the bundled Mermaid version.</p>
+              <p class="entry-links"><a href="https://github.com/lavallee/artoo-mermaid/releases/tag/v11.16.0">Release</a><a href="https://github.com/lavallee/artoo-mermaid">Code</a></p>
+            </div>
+          </article>
+        </section>
+
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <a class="wordmark wordmark-footer" href="#top" aria-label="Marc LaVallee, back to top">
-          <span class="wordmark-mark" aria-hidden="true">ML</span>
-          <span>Marc LaVallee</span>
-        </a>
-        <p>Open-source systems and public experiments from New Jersey.</p>
+      <div class="wrap">
+        <p>Marc LaVallee · New Jersey · The repos are the invitation — <a href="https://github.com/lavallee">github.com/lavallee</a></p>
       </div>
-      <div class="footer-links">
-        <a href="https://github.com/lavallee">GitHub</a>
-        <a href="https://njschooldata.fyi">NJ School Data</a>
-        <a href="https://backfield.net">Backfield</a>
-        <a href="https://caz.lyra-forge.com">Caz Games</a>
-      </div>
-      <p class="footer-note">Built in public · 2026</p>
     </footer>
   </body>
 </html>

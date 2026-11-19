@@ -1,2 +1,0 @@
-- contentinfo
-  - link "GitHub Pages" [ref=e3]

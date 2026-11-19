@@ -3,36 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A running, reverse-chronological log of releases from Marc LaVallee's open-source projects — what shipped, what grew, what got fixed, with links to the code and docs.">
-    <meta property="og:title" content="Marc LaVallee — Open-source release log">
+    <meta name="description" content="A running, reverse-chronological log of releases from Marc Lavallee's open-source projects — what shipped, what grew, what got fixed, with links to the code and docs.">
+    <meta property="og:title" content="Marc Lavallee — Open-source release log">
     <meta property="og:description" content="A running log of releases from my open-source projects, newest first.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lavallee.github.io/">
     <meta name="twitter:card" content="summary">
-    <title>Marc LaVallee — Open-source release log</title>
+    <title>Marc Lavallee — Open-source release log</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <header class="site-header">
       <div class="wrap">
-        <h1>Marc LaVallee</h1>
-        <p class="tagline">A running log of open-source releases, newest first. <a href="https://github.com/lavallee">GitHub <span aria-hidden="true">↗</span></a></p>
+        <h1>Marc Lavallee</h1>
+        <p class="tagline">A running log of open-source releases, newest first.</p>
+        <p class="profile-links"><a href="https://github.com/lavallee">GitHub <span aria-hidden="true">↗</span></a><a href="https://x.com/lavallee">X <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/marclavallee">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://www.lyra-forge.com">Lyra Forge <span aria-hidden="true">↗</span></a><a href="https://www.lyra-tk.com">Lyra-TK <span aria-hidden="true">↗</span></a></p>
         <p class="intro">I build small open-source tools for research, decision-making, journalism, and creative work with AI. This page records what ships from those projects: what grew, what changed, what got fixed. Each entry links to the code, the release, and the docs where they exist.</p>
       </div>
     </header>
 
-    <nav class="projects" aria-label="Projects with releases">
+    <nav class="projects" aria-label="Projects">
       <div class="wrap">
-        <p class="projects-label">Projects in the log</p>
+        <p class="projects-label">Research &amp; evidence</p>
         <ul>
-          <li><span class="p-name"><a href="https://github.com/lavallee/artoo">artoo</a> · <a href="https://lavallee.github.io/artoo/">docs</a></span><span class="p-desc">Self-contained HTML mini-sites that pair a presentation with the research behind it.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/artoo-mermaid">artoo-mermaid</a></span><span class="p-desc">Pinned Mermaid diagrams vendored offline into artoo artifacts.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/chip">chip</a></span><span class="p-desc">A contract for portable, versioned operational components.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/chipsocket">chipsocket</a></span><span class="p-desc">The socket runner for chip, and its minimal second host.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/cub">cub</a></span><span class="p-desc">A CLI for Ralph + Beads-style development with harnesses like Claude Code and Codex.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/daymark">daymark</a></span><span class="p-desc">Tasks, plans, recurrence, and durable reminder state for people and their agents.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/eno">eno</a> · <a href="https://lavallee.github.io/eno/">docs</a></span><span class="p-desc">Structural intelligence and gardening for your Obsidian vault — CLI, MCP, and HTTP.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/flip">flip</a> · <a href="https://lavallee.github.io/flip/">docs</a></span><span class="p-desc">Format and tooling for agent-driven research notebooks.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/flip-documents">flip-documents</a></span><span class="p-desc">Original document capture and conversion for Flip notebooks.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/flip-github">flip-github</a></span><span class="p-desc">Complete GitHub issue, PR, and Discussion capture for Flip notebooks.</span></li>
@@ -40,25 +34,49 @@
           <li><span class="p-name"><a href="https://github.com/lavallee/flip-publication">flip-publication</a></span><span class="p-desc">Editorial handoff workflow and templates for Flip notebooks.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/flip-reddit">flip-reddit</a></span><span class="p-desc">Reddit thread evidence with original Atom custody and a Flip adapter.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/flip-youtube">flip-youtube</a></span><span class="p-desc">Timestamped caption and ASR evidence for Flip notebooks.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/gipper">gipper</a> · <a href="https://lavallee.github.io/gipper/">docs</a></span><span class="p-desc">Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/llm-bingo">llm-bingo</a></span><span class="p-desc">Bingo for LLM-isms, scored against your own transcripts.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/milton">milton</a></span><span class="p-desc">Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/oura-cli">oura-cli</a></span><span class="p-desc">Python CLI for the Oura API v2.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/somm">somm</a> · <a href="https://lavallee.github.io/somm/">docs</a></span><span class="p-desc">LLM call management and optimization: telemetry, routing, model memory.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/spindle">spindle</a> · <a href="https://lavallee.github.io/spindle/">docs</a></span><span class="p-desc">Choose, hand over, and track the skills coding agents use.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/toucan">toucan</a> · <a href="https://lavallee.github.io/toucan/">docs</a></span><span class="p-desc">An infinite canvas you edit by hand while your agents edit it beside you.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/toucan-source-daymark">toucan-source-daymark</a></span><span class="p-desc">A Daymark project as a toucan plan source: boards, gantts and tables that write back.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/vizier">vizier</a> · <a href="https://lavallee.github.io/vizier/">docs</a></span><span class="p-desc">Generate and critique journalistic data visualizations.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/yoinker">yoinker</a></span><span class="p-desc">Understand how it works; yoink what transfers.</span></li>
-        </ul>
-        <p class="projects-label" style="margin-top:1.25rem;">Active but not yet released</p>
-        <ul>
-          <li><span class="p-name"><a href="https://github.com/lavallee/backfield-client-sdk">backfield-client-sdk</a></span><span class="p-desc">Python SDK + light ADK for backfield.net (zero deps).</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/datasette-dossier">datasette-dossier</a></span><span class="p-desc">Entity-centered, host-themeable dossier views for Datasette.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/des">des</a> · <a href="https://lavallee.github.io/des/">docs</a></span><span class="p-desc">Lyra design system.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/flip-examples">flip-examples</a></span><span class="p-desc">Real, browsable flip notebooks.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/ergo">ergo</a></span><span class="p-desc">Dataset documentation with structured, code-linked known-issue registries.</span></li>
           <li><span class="p-name"><a href="https://github.com/lavallee/ergo-directory">ergo-directory</a></span><span class="p-desc">An index of published ergo data pages, clustered by subject.</span></li>
-          <li><span class="p-name"><a href="https://github.com/lavallee/flip-examples">flip-examples</a></span><span class="p-desc">Real, browsable flip notebooks.</span></li>
+        </ul>
+
+        <p class="projects-label">Knowledge &amp; commitments</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/eno">eno</a> · <a href="https://lavallee.github.io/eno/">docs</a></span><span class="p-desc">Structural intelligence and gardening for your Obsidian vault — CLI, MCP, and HTTP.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/daymark">daymark</a></span><span class="p-desc">Tasks, plans, recurrence, and durable reminder state for people and their agents.</span></li>
+        </ul>
+
+        <p class="projects-label">Agent intelligence &amp; operations</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/somm">somm</a> · <a href="https://lavallee.github.io/somm/">docs</a></span><span class="p-desc">LLM call management and optimization: telemetry, routing, model memory.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/milton">milton</a></span><span class="p-desc">Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/spindle">spindle</a> · <a href="https://lavallee.github.io/spindle/">docs</a></span><span class="p-desc">Choose, hand over, and track the skills coding agents use.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/cub">cub</a></span><span class="p-desc">A CLI for Ralph + Beads-style development with harnesses like Claude Code and Codex.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/chip">chip</a></span><span class="p-desc">A contract for portable, versioned operational components.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/chipsocket">chipsocket</a></span><span class="p-desc">The socket runner for chip, and its minimal second host.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/yoinker">yoinker</a></span><span class="p-desc">Understand how it works; yoink what transfers.</span></li>
+        </ul>
+
+        <p class="projects-label">Publishing &amp; visualization</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/artoo">artoo</a> · <a href="https://lavallee.github.io/artoo/">docs</a></span><span class="p-desc">Self-contained HTML mini-sites that pair a presentation with the research behind it.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/artoo-mermaid">artoo-mermaid</a></span><span class="p-desc">Pinned Mermaid diagrams vendored offline into artoo artifacts.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/vizier">vizier</a> · <a href="https://lavallee.github.io/vizier/">docs</a></span><span class="p-desc">Generate and critique journalistic data visualizations.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/des">des</a> · <a href="https://lavallee.github.io/des/">docs</a></span><span class="p-desc">Lyra design system.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/datasette-dossier">datasette-dossier</a></span><span class="p-desc">Entity-centered, host-themeable dossier views for Datasette.</span></li>
+        </ul>
+
+        <p class="projects-label">Shared surfaces for people and agents</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/toucan">toucan</a> · <a href="https://lavallee.github.io/toucan/">docs</a></span><span class="p-desc">An infinite canvas you edit by hand while your agents edit it beside you.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/toucan-source-daymark">toucan-source-daymark</a></span><span class="p-desc">A Daymark project as a toucan plan source: boards, gantts and tables that write back.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/backfield-client-sdk">backfield-client-sdk</a></span><span class="p-desc">Python SDK + light ADK for backfield.net (zero deps).</span></li>
+        </ul>
+
+        <p class="projects-label">Utilities &amp; experiments</p>
+        <ul>
+          <li><span class="p-name"><a href="https://github.com/lavallee/gipper">gipper</a> · <a href="https://lavallee.github.io/gipper/">docs</a></span><span class="p-desc">Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/oura-cli">oura-cli</a></span><span class="p-desc">Python CLI for the Oura API v2.</span></li>
+          <li><span class="p-name"><a href="https://github.com/lavallee/llm-bingo">llm-bingo</a></span><span class="p-desc">Bingo for LLM-isms, scored against your own transcripts.</span></li>
         </ul>
       </div>
     </nav>
@@ -528,11 +546,5 @@
 
       </div>
     </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <p>Marc LaVallee · New Jersey · The repos are the invitation — <a href="https://github.com/lavallee">github.com/lavallee</a></p>
-      </div>
-    </footer>
   </body>
 </html>

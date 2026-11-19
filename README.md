@@ -1,6 +1,6 @@
 # lavallee.github.io
 
-The source for [lavallee.github.io](https://lavallee.github.io/): a reverse-chronological, running log of releases from Marc LaVallee's open-source projects — what shipped, what grew, what got fixed, with links to the code, the release, and the docs.
+The source for [lavallee.github.io](https://lavallee.github.io/): a reverse-chronological, running log of releases from Marc Lavallee's open-source projects — what shipped, what grew, what got fixed, with links to the code, the release, and the docs.
 
 The page is intentionally dependency-free static HTML and CSS (system fonts, no build step, no JS). To preview it locally:
 

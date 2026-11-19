@@ -71,6 +71,13 @@ code {
   font-size: 1.05rem;
 }
 
+.profile-links {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+}
+
+.profile-links a { margin-right: 1.1rem; white-space: nowrap; }
+
 .intro {
   margin: 1.5rem 0 0;
   max-width: 40rem;
@@ -190,14 +197,3 @@ code {
 }
 
 .entry-links a { margin-right: 0.9rem; }
-
-/* Footer */
-
-.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 1.5rem 0 3rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.site-footer p { margin: 0; }

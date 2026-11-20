@@ -32,6 +32,27 @@ artoo deploy homepage    # stage the site, copy it to the Pages root, commit, pu
 
 `artoo deploy` runs `homepage/deploy.sh`, which copies the firewall-cleared staging tree to the repository root, prunes files the renderer no longer emits, commits, and pushes to `main`. GitHub Pages rebuilds within a couple of minutes.
 
-## Adding a release
+## Release-day routine
 
-Prepend an entry to the top of its month section in `homepage/content.md` (create the month if needed): a bold-lead paragraph with the date, the project, the version linked to its release tag, a short honest summary of what grew and changed, and trailing Code/Docs links. Same-day patch releases of one project merge into a single entry with a version range. Update the project index only when a project first releases or its description changes.
+Run this for each public open-source release from a project listed here. During release preparation,
+draft a short entry from the changelog. After GitHub publishes the release, complete the log update
+as part of shipping.
+
+1. Verify the public release URL, version and UTC publication date. Read its notes and check the
+   public project and docs links. Use the published release as the source for the entry.
+2. Start from current `main` in a clean checkout of this repository. Search `homepage/content.md`
+   for the exact release URL. If it is already present, verify that it made it to the live page.
+3. Add the entry to `homepage/content.md` under the release's month and year, newest first. Use a
+   bold lead with the date, project and version linked to the release. Summarize the change in a
+   few sentences and finish with Code and Docs links where available. Same-day patch releases of
+   one project can share a version range with links to the applicable releases. Update the project
+   index when a project first releases or its description changes.
+4. From the repository root, run `artoo build homepage` and check the rendered entry and links.
+   Review the working tree before running `artoo deploy homepage --skip-build`. The deploy script
+   stages, commits and pushes the changes in this checkout.
+5. Wait for GitHub Pages, then open [the live release log](https://lavallee.github.io/) and verify
+   that the entry appears with the correct release and docs links. If publication is blocked, keep
+   the draft in the source checkout and record the blocker in the release handoff.
+
+For a published release, `gh release view TAG -R OWNER/REPO --json url,tagName,publishedAt,isDraft,body`
+gives the source fields. Project-specific docs are published through the project's own release process.

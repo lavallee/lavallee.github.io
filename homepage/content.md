@@ -110,6 +110,8 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 ## November 2026
 
+**Nov 20 — [toucan v0.17.0](https://github.com/lavallee/toucan/releases/tag/v0.17.0).** Publish screenshot revisions to a canvas, pin feedback to the exact image, and compare it with a revision linked in the producer’s reply. Producers can pull their pending notes through a CLI or a versioned API. Inspired by [Rounds by Kris Puckett](https://github.com/krispuckett/rounds). [Code](https://github.com/lavallee/toucan) · [Use cases and docs](https://lavallee.github.io/toucan/use-cases.html)
+
 **Nov 19 — [artoo v0.11.0](https://github.com/lavallee/artoo/releases/tag/v0.11.0).** Artoo can now say where each rendered block came from: a source map marks every block with the file and lines that produced it (with each file's hash at build time), and `artoo edit` opens an artifact's pages for in-place editing. `[research] publish = false` keeps a private flip projection out of the page while its sources still travel with each block, and collection labels name pages in navigation and breadcrumbs. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
 
 **Nov 19 — [artoo v0.10.4](https://github.com/lavallee/artoo/releases/tag/v0.10.4).** Small correctness patch: `&` is now escaped once, not twice — fixing headings like `News & Observer` in the on-this-page contents and link URLs with query strings.

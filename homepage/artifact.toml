@@ -7,15 +7,18 @@ form = "article"
 look = "ledger"
 status = "live"
 created = "2026-11-19"
-updated = "2026-11-19"
+updated = "2026-11-20"
+
+[build]
+commands = ["if [ ! -d site/lib/artoo-kit ]; then mkdir -p site/lib && cp -R ../lib/artoo-kit site/lib/; fi"]
 
 [content]
 source = "content.md"
 sourcemap = true
 
 [edit]
-comments = "edit/comments.json"
 config = "production/copycat.json"
+comments = "edit/comments.json"
 
 [deploy]
 target = "command"

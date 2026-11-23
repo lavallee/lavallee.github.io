@@ -78,14 +78,18 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 - [eno](https://github.com/lavallee/eno) ([docs](https://lavallee.github.io/eno/)) — Structural intelligence and gardening for your Obsidian vault — CLI, MCP, and HTTP.
 - [daymark](https://github.com/lavallee/daymark) — Tasks, plans, recurrence, and durable reminder state for people and their agents.
 
-## Agent intelligence & operations
+## AI infrastructure & operations
 
 - [somm](https://github.com/lavallee/somm) ([docs](https://lavallee.github.io/somm/)) — LLM call management and optimization: telemetry, routing, model memory.
-- [milton](https://github.com/lavallee/milton) — Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.
-- [spindle](https://github.com/lavallee/spindle) ([docs](https://lavallee.github.io/spindle/)) — Choose, hand over, and track the skills coding agents use.
-- [cub](https://github.com/lavallee/cub) — A CLI for Ralph + Beads-style development with harnesses like Claude Code and Codex.
+- [gipper](https://github.com/lavallee/gipper) ([docs](https://lavallee.github.io/gipper/)) — Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.
 - [chip](https://github.com/lavallee/chip) — A contract for portable, versioned operational components.
 - [chipsocket](https://github.com/lavallee/chipsocket) — The socket runner for chip, and its minimal second host.
+- [milton](https://github.com/lavallee/milton) — Graded, typed findings over agent exhaust — sessions, receipts, ledgers, git.
+
+## Agent tooling
+
+- [spindle](https://github.com/lavallee/spindle) ([docs](https://lavallee.github.io/spindle/)) — Choose, hand over, and track the skills coding agents use.
+- [cub](https://github.com/lavallee/cub) — A CLI for Ralph + Beads-style development with harnesses like Claude Code and Codex.
 - [yoinker](https://github.com/lavallee/yoinker) — Understand how it works; yoink what transfers.
 
 ## Publishing & visualization
@@ -104,7 +108,6 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 ## Utilities & experiments
 
-- [gipper](https://github.com/lavallee/gipper) ([docs](https://lavallee.github.io/gipper/)) — Run GPU jobs across cloud markets: estimates, collection, verified teardown, a local ledger.
 - [oura-cli](https://github.com/lavallee/oura-cli) — Python CLI for the Oura API v2.
 - [llm-bingo](https://github.com/lavallee/llm-bingo) — Bingo for LLM-isms, scored against your own transcripts.
 

@@ -182,15 +182,33 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Nov 10 — [somm v0.26.1 and v0.26.2](https://github.com/lavallee/somm/releases).** Two patch releases: `somm-mcp` installs again (the 2.x MCP SDK renamed `FastMCP`; the dependency is now `mcp>=1.30.0,<2`), `OllamaProvider._client()` returns as the one seam every request goes through, `exact_max_tokens` sends the token cap as given, and the free OpenRouter roster drops a model that left the catalog.
 
+**Nov 10 — [somm v0.19.4–v0.26.0](https://github.com/lavallee/somm/releases).** Eleven releases over three days. `somm/auto` routes a workload adaptively across subscriptions. A data boundary says where a workload's data may go (`local`, `zdr`, `subscribed`, `unvetted`), and OpenRouter models are admitted to a tier from evidence, not declaration. The ledger records how a call really ended, streams share `generate`'s call path, and `generate_structured` makes one JSON call with catchable failures. `decide_many` asks several questions about one input in a single request. 0.20.2 carries eight fixes from an audit of the hot path. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
+**Nov 10 — [daymark v0.1.0 and v0.2.0](https://github.com/lavallee/daymark/releases).** First releases. 0.1.0 is an embeddable SQLite engine for tasks, plans, recurring work and durable reminder state, with no cloud service, language model or notification provider. 0.2.0 makes it usable directly by agents handling a person's projects: plain verbs on the command line and as `daymark.Tasks`, such as `add`, `propose`, `ready`, `agenda`, `claim`, `done`, `wait` and `defer`. [Code](https://github.com/lavallee/daymark)
+
 **Nov 07 — [artoo v0.10.1 and v0.10.2](https://github.com/lavallee/artoo/releases).** The docs site gains a grouped features list — everything artoo does, with how you reach each feature and the release it arrived in, generated from a JSON file other tools can read. `work/verification/` ignores its own output so screenshots stop churning in Git, and multi-option toggles no longer run off a phone screen.
 
 **Nov 07 — [flip v0.23.0](https://github.com/lavallee/flip/releases/tag/v0.23.0).** Adds a built-in `repeatable-gain` workflow for turning recurring notebook problems into checked improvements, reusable extensions, or evidenced lessons, plus active-work guidance across the authoring skills. Fixes workflow continuation to choose the latest session by its recorded opening time rather than filename order, and names a config that doesn't parse instead of misreporting it.
 
+**Nov 07 — [toucan v0.9.0–v0.12.2](https://github.com/lavallee/toucan/releases).** Six releases in two days. Every open tab shows which agent is at work on a canvas and what it is about to do. A References panel reads a canvas's files, the project's and web pages beside the diagram. `TOUCAN_PUBLIC_URL` puts the server at a name of your own, and profiles bind a canvas to a named agent, so its chat and threads become that agent. The docs gain a full feature list, and the one-line install works with npm 12. [Code](https://github.com/lavallee/toucan) · [Docs](https://lavallee.github.io/toucan/)
+
+**Nov 07 — [artoo v0.9.0–v0.10.0](https://github.com/lavallee/artoo/releases).** Six releases in a day. Markdown content takes video figures that play as silent loops. Four patches, each found by `artoo verify --browser` on a real page, stop wide tables, long inline code, long words and bare URLs from widening a page on a phone. 0.10.0 bakes in what agent-written HTML has converged on: a constrained intermediate compiled to vetted markup, a declared escape hatch, and checks the tool runs instead of rules the author must remember. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
+
 **Nov 05 — [gipper v0.4.1–v0.4.3](https://github.com/lavallee/gipper/releases).** Custody hardening: names that merely describe a secret (`*_PROFILE`, `*_URL`, `*_PATH`…) no longer block uploads, secret detection inside custody files matches only value names that look secret (KEY, TOKEN, SECRET, PASSWORD, AUTH), entries can name the exact keys, and a missing file is reported instead of stopping every upload. 0.4.1 is a documentation and version-consistency patch.
+
+**Nov 05 — [gipper v0.3.0 and v0.4.0](https://github.com/lavallee/gipper/releases).** First public release, then a custody trail. 0.3.0 runs shell-driven GPU jobs across cloud markets from a TOML file: estimate the whole job, rent and check a host, run, collect results and verify teardown. 0.4.0 keeps a forensic record of what reached each rented machine, so when a provider reports an incident `gipper custody report` says what to rotate, what to review and what the trail can't vouch for. [Code](https://github.com/lavallee/gipper) · [Docs](https://lavallee.github.io/gipper/)
+
+**Nov 04 — [toucan v0.2.0–v0.8.0](https://github.com/lavallee/toucan/releases).** The first week of public releases, seven in four days. Agents can work with no tab open. Every canvas keeps a history to step back through. Comments become threads on a shape or a region, worked by agents and people. Each canvas has a folder for what agents write for it. 0.7.0 adds 22 templates, canvas formats, and a check that says whether a diagram is any good. 0.8.0 adds a one-line install of a prebuilt release. [Code](https://github.com/lavallee/toucan) · [Docs](https://lavallee.github.io/toucan/)
 
 ## October 2026
 
+**Oct 29 — [somm v0.19.2 and v0.19.3](https://github.com/lavallee/somm/releases).** Image prompts work on every provider, translated to each wire format. An unpinned stream now falls back to the next provider when the current one fails before any text has reached the caller. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
 **Oct 28 — [eno v0.5.0](https://github.com/lavallee/eno/releases/tag/v0.5.0).** Note-proposal review inside Obsidian: an agent queues a proposed rewrite with `scripts/propose_note.py`, and a new plugin command shows both complete versions side by side, applying the proposal only if the note still matches the source the agent read. A shared-notes guide covers the person-and-agent workflow, and tiling-threshold labels calibrate the duplicate-detection bands against reviewed pairs.
+
+**Oct 27 — [artoo v0.7.0 and v0.8.0](https://github.com/lavallee/artoo/releases).** Diagrams, offline. 0.7.0 adds `artoo-diagrams`: write Mermaid, and a vendored, hash-pinned copy of Pele renders it in the page's own type and colors, switching theme without being redrawn. 0.8.0 adds images in Markdown content, where a paragraph that is only an image becomes a figure with its caption. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
+
+**Oct 18 — [somm v0.18.0–v0.19.1](https://github.com/lavallee/somm/releases).** The Codex harness fails closed: its scope comes only from typed request fields, and a missing workspace raises instead of running in the home directory. 0.19.0 lets a Codex agent use the network inside its sandbox without a permission bypass. 0.19.1 attributes short Claude CLI answers to the right model. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
 
 **Oct 17 — [spindle v0.4.2](https://github.com/lavallee/spindle/releases/tag/v0.4.2).** Catalog refs use the skill's directory name when its frontmatter `name` is a display name, so every ref can be passed to `spindle use`; quoted frontmatter values are unescaped.
 
@@ -203,6 +221,8 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 **Oct 12 — [chip v0.4.0](https://github.com/lavallee/chip/releases/tag/v0.4.0).** Leads with the ladder: `chip.placement` turns daily evidence into a closed-vocabulary verdict — `observer`, `mint`, `parser`, or one of four honest refusals — using six rules that survived a hand-run over 1.1M production calls. `docs/socket.md` documents one contract with several live implementations, and the chip-socket skill ships as the eighth agent skill in the Lyra Forge marketplace.
 
 **Oct 12 — [spindle v0.3.0](https://github.com/lavallee/spindle/releases/tag/v0.3.0).** Conjunctive outcome gates for paired evaluations — one missing, malformed, or false gate blocks promotion regardless of mean score, with the exact failed case reported. Evaluation manifests reject unknown keys, and job-scoped leases let external dispatchers hold an explicit skill set per dispatched job, reconciled on startup when a job dies without releasing.
+
+**Oct 12 — [somm v0.17.0–v0.17.2](https://github.com/lavallee/somm/releases).** The intelligence loop (model intel, shadow grading, recommendations) becomes a command, `somm loop run | install | status`, with no web service or resident process. Two patches follow, the second from triaging 49 open recommendations and finding that 40 were one rule misreading one column. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
 
 **Oct 03 — [oura-cli v0.2.0](https://github.com/lavallee/oura-cli/releases/tag/v0.2.0).** Adds `oura summary` — compact dated JSON for activity and recovery, with distinct missing, incomplete, and conflicting data states — and fixes morning reports, empty-day caching, and heart-rate datetime bounds. The SQLite cache is permission-protected, and new logins add OAuth state and PKCE checks.
 
@@ -228,17 +248,29 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Aug 30 — [flip v0.22.0](https://github.com/lavallee/flip/releases/tag/v0.22.0).** The work loop is public and extensible: one core `flip next` lifecycle (orient → select → open → work → check → close), a TOML workflow registry, local plugin, extension, hook, and filter registries, and three packaged authoring skills. Executable handlers require explicit scope enablement and capabilities.
 
+**Aug 30 — [artoo v0.4.0–v0.6.0](https://github.com/lavallee/artoo/releases).** Presentations become a first-class kind with a real deck library. 0.5.0 separates what an artifact is from the form it takes (article, explorer, collection, deck). 0.6.0 adds evidence-bearing code maps: a versioned, renderer-neutral graph of a codebase with source coordinates, truth classes and confidence. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
+
 **Aug 29 — [flip v0.21.1](https://github.com/lavallee/flip/releases/tag/v0.21.1).** Makes the installation and first-run path match the product: layered onboarding, a network-free quickstart, installed-wheel smoke tests on Linux, macOS, and Windows, and mechanical validation for version lockstep, plugin manifests, and documentation links. Codex is detected and attributed before a notebook seeds its first question.
 
 **Aug 27 — [llm-bingo v0.2.0 and v0.2.1](https://github.com/lavallee/llm-bingo/releases).** Codex support via plugin manifest and catalog, one launcher for every install path, and a readable failure on old Pythons instead of `ModuleNotFoundError`. 0.2.1 fixes `score` counting the tool's own output — a rendered board self-matches 15 of its own 24 squares.
 
+**Aug 19 — [somm v0.15.0 and v0.16.0](https://github.com/lavallee/somm/releases).** A native async client (`agenerate`, `astream`, `aembed` and the structured calls) on the same routing, fallback and telemetry path. 0.16.0 is breaking on purpose: a pinned provider and model is no longer silently substituted when it fails. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
 **Aug 18 — [flip v0.21.0](https://github.com/lavallee/flip/releases/tag/v0.21.0).** A citation is a reference, and only a reference: `--source` and `--about` now refuse an id from another series — a question id is not a source — before the id is allocated, with messages that name the series and the right verb. Previously a reassuring message papered over a wrong-world citation, and five claims in one notebook carried it before anyone noticed.
+
+**Aug 18 — [flip v0.17.0–v0.20.0](https://github.com/lavallee/flip/releases).** Six releases that came out of using flip for real research. A notebook can hold a position on a claim and record how it was tested. Custody is taken at the moment of the fetch. A question page tells its whole journey. 0.19.0 hardens the format against a measured audit of a 682-source corpus, and 0.20.0 lets a beat tell a scheduled pass where to start. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
 
 **Aug 11 — [vizier v0.2.0–v0.3.1](https://github.com/lavallee/vizier/releases).** Four releases in one day. 0.2.0 ships vizier as a Claude Code plugin, with the corpus finally in the wheel (installed copies had been silently answering with nothing). 0.2.1 fixes the 0.1.0 upgrade path, which left upgraded installs reading an empty corpus. 0.3.0 renames the `weaver` source to `principles` — it was named for a private tool nobody outside could see — and names artoo as the companion project. 0.3.1 makes reads refresh the cached corpus index across upgrades, so an upgraded install stops answering with the previous version's rows.
 
 ## July 2026
 
+**Jul 31 — [flip v0.15.0–v0.16.2](https://github.com/lavallee/flip/releases).** `flip source recheck` re-fetches a source and records whether the world still matches what was captured. 0.16.0 fixes what a field report from one long research day found, and 0.16.2 records how a capture's bytes were obtained, from a fixed vocabulary of methods. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
+
 **Jul 28 — [eno v0.3.0](https://github.com/lavallee/eno/releases/tag/v0.3.0).** A generic OKF v0.2 consumer: standard Markdown links become first-class graph edges (resolved by path arithmetic only — unresolved links stay visible, nothing is guessed), and the portable trust fields ride the rebuildable index into every bounded read as one advisory line. New `eno trust` surfaces advisory candidates: past-stale notes, load-bearing concepts without provenance, generated-after-verified. Echoes, never verdicts.
+
+**Jul 26 — [flip v0.10.0–v0.14.0](https://github.com/lavallee/flip/releases).** Nine releases in three days. An agent's pursuit of a question becomes expressible and renderable. Notebooks become native OKF v0.2 bundles, a breaking change on disk with `flip migrate`. flip installs as a Claude Code plugin. Notebooks gain outcome kinds named in your own words, forecasts that accrue credibility as they resolve, and declared disciplines that say what a notebook is held to. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
+
+**Jul 25 — [artoo v0.1.0–v0.3.0](https://github.com/lavallee/artoo/releases).** First public releases. artoo generates and manages artifacts: self-contained HTML mini-sites that pair a presentation with the research behind it. 0.2.0 reads an attached flip notebook back out as provenance, and 0.3.0 closes the loop by generating from a notebook and routing feedback into it. [Code](https://github.com/lavallee/artoo) · [Docs](https://lavallee.github.io/artoo/)
 
 **Jul 22 — [llm-bingo v0.1.0](https://github.com/lavallee/llm-bingo/releases/tag/v0.1.0).** First release: bingo for LLM-isms, scored against your own Claude transcripts.
 
@@ -248,8 +280,32 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 **Jul 17 — [eno v0.2.0](https://github.com/lavallee/eno/releases/tag/v0.2.0).** flip-bundle awareness without any dependency on flip: bundle detection from frontmatter, the workspace handle table read at index time, and scoped wikilink resolution — unknown handle or unknown id stays unresolved, never a guess. The garden classifies unresolved id-shaped references as flip refs with actionable hints, not concept candidates.
 
+**Jul 17 — [flip v0.7.0–v0.9.0](https://github.com/lavallee/flip/releases).** The fetcher seam becomes three integration roles bound only in local config, never in the package. A bundled zero-dependency web fetcher means a first `add-source` needs no setup. Workspaces let many notebooks share one vault or repository. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
+
 **Jul 14 — [eno v0.1.1](https://github.com/lavallee/eno/releases/tag/v0.1.1).** Documentation and onboarding: a synthetic demo vault exercising every eno feature — orphans, stubs, drift, frontier — so a two-minute hello-world shows real signal, plus a "how eno works" page with CVD-safe charts chosen with vizier.
+
+**Jul 14 — [somm v0.12.0–v0.14.0](https://github.com/lavallee/somm/releases).** 0.12.0 replaces a mistakenly published 1.0.0 line: somm remains beta. 0.13.0 adds serving-performance rollups (latency percentiles, time to first token, throughput, cache-read ratio) and `somm bench`. 0.14.0 adds `somm.harnesses`, a public API for one Claude Code, Codex or OpenCode workspace attempt. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
+**Jul 14 — [eno v0.1.0](https://github.com/lavallee/eno/releases/tag/v0.1.0).** First public release: structural intelligence and gardening for an Obsidian vault, with a SQLite index over frontmatter, wikilinks, tags and headings, and excerpt-first retrieval. [Code](https://github.com/lavallee/eno) · [Docs](https://lavallee.github.io/eno/)
 
 **Jul 11 — [vizier v0.1.0](https://github.com/lavallee/vizier/releases/tag/v0.1.0).** First public release: a deterministic chart toolkit — validate, suggest-palette, suggest-ramp, ink, recommend-form, every suggestion validated before it's returned — plus 43 chart forms across the nine FT Visual Vocabulary families, corpus-backed critique routed through somm, and an MCP server. Published to PyPI as `datavizier`.
 
 **Jul 11 — [artoo-mermaid v11.16.0](https://github.com/lavallee/artoo-mermaid/releases/tag/v11.16.0).** Mermaid 11.16.0 as an artoo site library: `artoo lib add mermaid` vendors a pinned, hash-recorded `mermaid.min.js` into any artifact, so explanatory diagrams keep rendering from local files forever. The package version tracks the bundled Mermaid version.
+
+**Jul 10 — [flip v0.2.0–v0.6.0](https://github.com/lavallee/flip/releases).** From spec to working tool in a day. 0.2.0 publishes the flip spec: a git-friendly format for research notebooks kept by any mix of people and agents, with hashed source custody. 0.3.0 is the reference CLI. Notebooks become native OKF bundles, beats add a standing mission above notebooks, and `flip obsidian` makes a notebook a working vault. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
+
+**Jul 03 — [somm v0.3.0–v0.7.1](https://github.com/lavallee/somm/releases).** Eight releases in a day, the first of them OSS-ready: a neutral hooks surface, a bundled offline pricing snapshot and a ten-provider chain. Billing plans declare pay-as-you-go against metered providers, with windowed quotas, pacing and self-imposed budgets. 0.6.1 is the first PyPI release, and 0.7.0 captures samples at call time for online evaluation. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
+## April 2026
+
+**Apr 20 — [somm v0.1.0–v0.2.1](https://github.com/lavallee/somm/releases).** Initial public release of somm: self-hosted LLM telemetry, routing and an intelligence loop in one SQLite file, with no phone-home. Multimodal prompts and capability-aware routing follow, then the sommelier, a cross-project model advisor that remembers what you picked, and a Gemini provider. [Code](https://github.com/lavallee/somm) · [Docs](https://lavallee.github.io/somm/)
+
+## February 2026
+
+**Feb 11 — [cub v0.29.1 and v0.29.2](https://github.com/lavallee/cub/releases).** A documentation audit and overhaul, the prep pipeline renamed to the plan flow, and a more reliable planning pipeline with an integration impact assessment in its architect and itemize templates. [Code](https://github.com/lavallee/cub)
+
+## January 2026
+
+**Jan 30 — [cub v0.27.0–v0.29.0](https://github.com/lavallee/cub/releases).** A new Claude Agent SDK harness behind a harness abstraction, a ledger system, a punchlist command and a unified task CLI. 0.28.0 moves to one work-tracking model and invokes Claude Code for plan stages instead of generating them from templates. [Code](https://github.com/lavallee/cub)
+
+**Jan 18 — [cub v0.13.0–v0.26.4](https://github.com/lavallee/cub/releases).** Twenty-two releases in six days, starting with the rename from Curb to Cub. They add a vision-to-tasks pipeline, plan review, interview mode, document import, git workflow integration, a guardrails system for lessons learned, a Python core, a live dashboard, git worktrees for parallel work, a Docker sandbox mode and a hooks system. [Code](https://github.com/lavallee/cub)

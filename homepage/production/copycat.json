@@ -4,7 +4,7 @@
   "pages": [
     {
       "name": "Marc Lavallee",
-      "url": "http://127.0.0.1:8917/release-log/index.html",
+      "url": "http://127.0.0.1:8927/release-log/index.html",
       "selector": "main.article",
       "serve": {
         "dir": "site",

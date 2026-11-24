@@ -14,11 +14,11 @@ artoo edit homepage            # builds, then serves the editor on 127.0.0.1:891
 
 Saves write `homepage/content.md` and rebuild automatically; nothing is committed or pushed. The toolbar's **Agent** panel runs the host's signed-in Codex against the page's source, read-only: ask it to tighten a section, check a link, or apply the open comments, and its proposed edits arrive as a draft you review change by change before anything is saved. The editor config that enables the agent is `homepage/production/copycat.json`, named by `[edit] config` in the manifest — artoo's generated config does not carry the agent block.
 
-For editing from another machine on the network, share the editor through BB Connect:
+For editing from another machine on the network, share the editor through BB Connect (8916 and 8917 usually host other Copycat instances on this host, so this artifact's editor runs on 8927; the port is also pinned in `homepage/production/copycat.json` — move both together):
 
 ```bash
-bb connect expose 8916
-artoo edit homepage --share-origin https://<machine-label>--8916.<base-domain>
+bb connect expose 8927
+artoo edit homepage --port 8927 --copycat ~/Projects/copycat --share-origin https://<machine-label>--8927.<base-domain> --agent codex --agent-bin /home/marc/.local/bin/codex
 ```
 
 Then open the share URL and edit there. `--share-origin` admits exactly one authenticated https origin; it is not a way to publish.

@@ -70,8 +70,10 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 - [flip-reddit](https://github.com/lavallee/flip-reddit) — Reddit thread evidence with original Atom custody and a Flip adapter.
 - [flip-youtube](https://github.com/lavallee/flip-youtube) — Timestamped caption and ASR evidence for Flip notebooks.
 - [flip-examples](https://github.com/lavallee/flip-examples) — Real, browsable flip notebooks.
+- [flip-research](https://github.com/lavallee/flip-research) — A small default for flip's research role: web search, a plain page fetcher, and an optional model — public pieces only.
 - [ergo](https://github.com/lavallee/ergo) — Dataset documentation with structured, code-linked known-issue registries.
 - [ergo-directory](https://github.com/lavallee/ergo-directory) — An index of published ergo data pages, clustered by subject.
+- [pallet](https://github.com/lavallee/pallet) — Local-first dataset acquisition with custody: capture the bytes, shape a documented table, publish immutable releases pinned by hash.
 
 ## Knowledge & commitments
 
@@ -104,14 +106,22 @@ Find me on [GitHub](https://github.com/lavallee), [X](https://x.com/lavallee), a
 
 - [toucan](https://github.com/lavallee/toucan) ([docs](https://lavallee.github.io/toucan/)) — An infinite canvas you edit by hand while your agents edit it beside you.
 - [toucan-source-daymark](https://github.com/lavallee/toucan-source-daymark) — A Daymark project as a toucan plan source: boards, gantts and tables that write back.
+- [leyline](https://github.com/lavallee/leyline) — The working parts of tools where people and coding agents share a document: chat panel, agent providers, conversations, routines, history, proposals, activity, threads.
 - [backfield-client-sdk](https://github.com/lavallee/backfield-client-sdk) — Python SDK + light ADK for backfield.net (zero deps).
 
 ## Utilities & experiments
 
 - [oura-cli](https://github.com/lavallee/oura-cli) — Python CLI for the Oura API v2.
+- [wheelhouse](https://github.com/lavallee/wheelhouse) — A shared template for internal admin tools: a running admin, copy-and-sync parts, and a Starlette backend contract.
 - [llm-bingo](https://github.com/lavallee/llm-bingo) — Bingo for LLM-isms, scored against your own transcripts.
 
 ## November 2026
+
+**Nov 24 — [flip v0.27.0](https://github.com/lavallee/flip/releases/tag/v0.27.0).** Passage pins on any held source. `flip source passage pin` records the exact words a claim rests on — a quote or a line range, with the SHA-256 of the pinned words and of the copy they were read from, and which copy that was: the raw bytes or the extraction that produced them. A quote that is not in the held copy names its nearest match; `unpin` is refused while a claim cites the pin; a label whose words moved in a re-extraction can be re-anchored. Claims cite pins as `--source A3§label`, and doctor's excerpt checks now cover every source with held text. A recorded `--basis` on claim verification names the written rule a record was made under. [Code](https://github.com/lavallee/flip) · [Docs](https://lavallee.github.io/flip/)
+
+**Nov 23 — [yoinker v0.3.0](https://github.com/lavallee/yoinker/releases/tag/v0.3.0).** Decision records. An assessment worth finding again is kept with the project it concerns (`docs/yoinker/` by default) or in a per-user store, and stays out of public repositories unless the user asks. A dependency-free helper finds an earlier record, opens a new one with a stable name, and pins a forge repository to its default-branch commit without cloning it. An append-only outcome log keeps a borrow that landed, a test result, an expiry or a reversal attached to the decision. The change retired a private service that had been the only place assessments lived; its 63 assessments moved into the projects they concern. [Code](https://github.com/lavallee/yoinker) · [Site](https://lavallee.github.io/yoinker/)
+
+**Nov 23 — [vizier v0.4.0](https://github.com/lavallee/vizier/releases/tag/v0.4.0).** Look first, then show. A request to see data is now a good request: vizier ranks the ways to show it, draws the best ones, states the trade-offs, and when a sentence, a stat tile or a table would serve the reader better, says so and provides it beside any chart it can draw — it no longer answers with a refusal. `vizier explore` answers "what is in this table?" before there is a claim: a contact sheet of small static views with each field's oddities (round-number spikes, long tails, dominant values, likely missing-value codes) and missingness by field and group. Derisive wording softened where it was tone rather than substance. [Code](https://github.com/lavallee/vizier) · [Docs](https://lavallee.github.io/vizier/)
 
 **Nov 23 — [toucan v0.21.0](https://github.com/lavallee/toucan/releases/tag/v0.21.0).** One Export menu for every way out of a canvas: a picture as SVG or PNG, the animated build, a file another tool reads, or what the diagram says in words. An exported SVG carries its title and that description inside it, and `toucan describe` prints the words, so an agent can check a diagram against what was asked without a picture. `toucan export OUT` writes any of them by the file's ending. Also fixes the first command on a canvas just made from a template seeing it empty. The description follows [open-diagram](https://github.com/lukendeasy/open-diagram) by Luke Deasy. [Code](https://github.com/lavallee/toucan) · [Docs](https://lavallee.github.io/toucan/agents.html)
 

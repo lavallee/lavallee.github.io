@@ -7,7 +7,7 @@ form = "article"
 look = "ledger"
 status = "live"
 created = "2026-11-19"
-updated = "2026-11-24"
+updated = "2026-11-26"
 
 [build]
 commands = ["if [ ! -d site/lib/artoo-kit ]; then mkdir -p site/lib && cp -R ../lib/artoo-kit site/lib/; fi"]
